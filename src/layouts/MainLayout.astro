@@ -1,21 +1,23 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import VideoHeader from "../components/VideoHeader.astro";
 
 const { title, description } = Astro.props;
 ---
 
 <html lang="es">
-  <BaseHead title={title} description={description}/>
+  <BaseHead title={title} description={description} />
 
   <body>
-    <header>
-        <h1>Hola</h1>
-    </header>
-    <main>
-        Adiós
-    </main>
+    <VideoHeader
+      src="/videoTrail2024.mp4"
+      poster="/frameTrail2024.png"
+      title="Trail Valle de Arbas 2025"
+      description="Inscríbete y disfruta de la aventura."
+    />
+    <main>Adiós</main>
     <footer>
-        <p>Gracias por visitar</p>
+      <p>Gracias por visitar</p>
     </footer>
   </body>
 </html>
