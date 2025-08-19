@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import VideoHeader from "../components/VideoHeader.astro";
+import StickyMenu from "../components/StickyMenu.astro";
 
 const { title, description } = Astro.props;
 ---
@@ -9,15 +10,23 @@ const { title, description } = Astro.props;
   <BaseHead title={title} description={description} />
 
   <body>
+    <StickyMenu class="stiky"/>
     <VideoHeader
       src="/videoTrail2024.mp4"
       poster="/frameTrail2024.png"
       title="Trail Valle de Arbas 2025"
-      description="Inscríbete y disfruta de la aventura."
     />
     <main>Adiós</main>
-    <footer>
+    <footer class="mt-5000">
       <p>Gracias por visitar</p>
     </footer>
   </body>
 </html>
+
+<style>
+  .stiky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+</style>

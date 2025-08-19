@@ -2,86 +2,42 @@
 import RoundedInfoField from "./fields/RoundedInfoField.astro";
 
 // Props: src (ruta del video), title, description, poster (frame inicial)
-const { src, title, description, poster } = Astro.props;
+const { src, title, poster } = Astro.props;
 ---
 
-<div class="header-video-container w-[100%] h-[60vh]">
+<div class="header-video-container w-[100%] h-[60vh] pt-20" style="margin-top: -80px;">
   <video autoplay loop muted playsinline class="header-video" poster={poster}>
     <source src={src} type="video/mp4" />
     Tu navegador no soporta el vídeo.
   </video>
   <div class="header-content">
-    <section
-      class="header-top flex items-center justify-between px-4 py-4 w-full"
-    >
-      <div class="flex items-center gap-3 ml-2">
-        <img
-          src="/ms-icon-144x144.png"
-          alt="Logo Valle de Arbas"
-          class="h-12 w-12 object-contain"
-        />
-        <span class="font-bold text-2xl text-white">Valle de Arbas</span>
-      </div>
-      <nav class="header-menu">
-        <input type="checkbox" id="menu-toggle" class="hidden peer" />
-        <label
-          for="menu-toggle"
-          class="block md:hidden cursor-pointer text-white p-2"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="h-8 w-8"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            ><path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path></svg
-          >
-        </label>
-        <ul
-          class="menu-list flex-col md:flex-row md:flex hidden md:visible peer-checked:flex bg-black/70 md:bg-transparent absolute md:static right-0 top-16 md:top-0 w-48 md:w-auto rounded md:rounded-none shadow-md md:shadow-none"
-        >
-          <li>
-            <a href="/" class="block px-4 py-2 text-white hover:bg-white/10"
-              >Inicio</a>
-          </li>
-          <li>
-            <a href="/info" class="block px-4 py-2 text-white hover:bg-white/10"
-              >Información</a>
-          </li>
-          <li>
-            <a
-              href="/inscripcion"
-              class="block px-4 py-2 text-white hover:bg-white/10"
-              >Inscripción</a>
-          </li>
-          <li>
-            <a
-              href="/contacto"
-              class="block px-4 py-2 text-white hover:bg-white/10">Contacto</a>
-          </li>
-        </ul>
-      </nav>
-    </section>
     <div class="flex justify-center mb-4">
       <h1 class="text-4xl text-center font-extrabold mt-8 w-[80%]">{title}</h1>
     </div>
-    <div class="flex flex-row gap-2 justify-center">
+    <div class="flex flex-col gap-4 justify-center items-center mt-10">
       <RoundedInfoField
         text="9-10 Mayo 2025"
-        icon="/icons/calendar.svg"
+        icon="M4 10h16m-8-3V4M7 7V4m10 3V4M5 20h14a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1Zm3-7h.01v.01H8V13Zm4 0h.01v.01H12V13Zm4 0h.01v.01H16V13Zm-8 4h.01v.01H8V17Zm4 0h.01v.01H12V17Zm4 0h.01v.01H16V17Z"
+      />
+      <RoundedInfoField
+        text="Valle de Arbas, León"
+        icon="M11.906 1.994a8.002 8.002 0 0 1 8.09 8.421 7.996 7.996 0 0 1-1.297 3.957.996.996 0 0 1-.133.204l-.108.129c-.178.243-.37.477-.573.699l-5.112 6.224a1 1 0 0 1-1.545 0L5.982 15.26l-.002-.002a18.146 18.146 0 0 1-.309-.38l-.133-.163a.999.999 0 0 1-.13-.202 7.995 7.995 0 0 1 6.498-12.518ZM15 9.997a3 3 0 1 1-5.999 0 3 3 0 0 1 5.999 0Z"
+      />
+      <RoundedInfoField
+        text="Inscripción abierta"
+        icon="M8 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4H6Zm7.25-2.095c.478-.86.75-1.85.75-2.905a5.973 5.973 0 0 0-.75-2.906 4 4 0 1 1 0 5.811ZM15.466 20c.34-.588.535-1.271.535-2v-1a5.978 5.978 0 0 0-1.528-4H18a4 4 0 0 1 4 4v1a2 2 0 0 1-2 2h-4.535Z"
       />
     </div>
   </div>
 </div>
 
+
 <style>
   .header-video-container {
     position: relative;
     overflow: hidden;
+    margin-top: -64px; /* Altura aproximada del menú sticky */
+    z-index: 1;
   }
 
   .header-video {
@@ -102,14 +58,18 @@ const { src, title, description, poster } = Astro.props;
   }
 
   .header-top {
-    position: relative;
-    z-index: 3;
+    position: sticky;
+    top: 0;
+    left: 0;
     width: 100%;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 1rem;
-    background: transparent;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
   .header-menu {
