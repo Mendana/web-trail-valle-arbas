@@ -11,7 +11,7 @@
     <label for="menu-toggle" class="block md:hidden cursor-pointer text-white p-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
     </label>
-    <ul class="menu-list flex-col md:flex-row md:flex hidden md:visible peer-checked:flex bg-black/70 md:bg-transparent absolute md:static right-0 top-16 md:top-0 w-48 md:w-auto rounded md:rounded-none shadow-md md:shadow-none">
+    <ul class="menu-list flex-col md:flex-row md:flex hidden md:visible peer-checked:flex bg-[rgba(240, 240, 240, 0.08)] md:bg-transparent absolute md:static right-0 top-16 md:top-0 w-48 md:w-auto rounded md:rounded-none shadow-md md:shadow-none">
       <li><a href="/" class="block px-4 py-2 text-white hover:bg-white/10">Inicio</a></li>
       <li><a href="/info" class="block px-4 py-2 text-white hover:bg-white/10">Información</a></li>
       <li><a href="/inscripcion" class="block px-4 py-2 text-white hover:bg-white/10">Inscripción</a></li>
@@ -38,19 +38,20 @@
     position: absolute;
     right: 0;
     top: 2.5rem;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(136, 136, 136, 0.85);
     border-radius: 0.5rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     min-width: 12rem;
     display: none;
+    backdrop-filter: blur(4px);
   }
+
   #menu-toggle:checked ~ .menu-list {
     display: flex;
   }
   @media (min-width: 768px) {
     .menu-list {
       position: static;
-      background: transparent;
       box-shadow: none;
       border-radius: 0;
       min-width: 0;

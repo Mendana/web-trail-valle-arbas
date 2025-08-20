@@ -1,7 +1,7 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import VideoHeader from "../components/VideoHeader.astro";
-import StickyMenu from "../components/StickyMenu.astro";
+import BaseHead from '../components/BaseHead.astro';
+import VideoHeader from '../components/VideoHeader.astro';
+import StickyMenu from '../components/StickyMenu.astro';
 
 const { title, description } = Astro.props;
 ---
@@ -10,13 +10,22 @@ const { title, description } = Astro.props;
   <BaseHead title={title} description={description} />
 
   <body>
-    <StickyMenu class="stiky"/>
+    <StickyMenu class="stiky" />
     <VideoHeader
       src="/videoTrail2024.mp4"
       poster="/frameTrail2024.png"
       title="Trail Valle de Arbas 2025"
     />
-    <main>Adiós</main>
+    <main>
+      <h2 class="text-3xl font-bold text-center mt-8 mb-4">
+        Descubre el <span class="text-gradient">Valle de Arbas</span>
+      </h2>
+      <p class="text-center text-lg mb-8">
+        Bienvenido al Valle de Arbas, donde el 10 de Mayo se celebrará la tercera edición de la
+        carrera <span class="text-gradient font-bold">TRAIL VALLE DE ARBAS</span>. Como puedes ver en las
+        fotos se trata de un valle que no deja indiferente a nadie.
+      </p>
+    </main>
     <footer class="mt-5000">
       <p>Gracias por visitar</p>
     </footer>
@@ -28,5 +37,21 @@ const { title, description } = Astro.props;
     position: sticky;
     top: 0;
     z-index: 50;
+  }
+  .text-gradient {
+    background: linear-gradient(270deg, #f96742, #e49a69, #f96742);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 6s linear infinite;
+  }
+
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
   }
 </style>
