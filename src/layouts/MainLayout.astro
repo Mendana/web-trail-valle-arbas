@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import VideoHeader from '../components/VideoHeader.astro';
 import StickyMenu from '../components/StickyMenu.astro';
+import SimpleCarousel from '../components/SimpleCarousel.astro';
 
 const { title, description } = Astro.props;
 ---
@@ -20,10 +21,17 @@ const { title, description } = Astro.props;
       <h2 class="text-3xl font-bold text-center mt-8 mb-4">
         Descubre el <span class="text-gradient">Valle de Arbas</span>
       </h2>
-      <p class="text-center text-lg mb-8">
+      <p class="text-center text-lg mb-8 w-[90%] mx-auto">
         Bienvenido al Valle de Arbas, donde el 10 de Mayo se celebrará la tercera edición de la
-        carrera <span class="text-gradient font-bold">TRAIL VALLE DE ARBAS</span>. Como puedes ver en las
-        fotos se trata de un valle que no deja indiferente a nadie.
+        carrera <span class="text-gradient font-bold">TRAIL VALLE DE ARBAS</span>. Como puedes ver
+        en las fotos se trata de un valle que no deja indiferente a nadie.
+      </p>
+      
+      <SimpleCarousel />
+
+      <h2 class="text-3xl font-bold text-center mt-8 mb-4">Multiples categorías</h2>
+      <p class="text-center text-lg w-[90%] mx-auto">Para que todos puedan disfrutar de estos paisajes hemos preparado varias categorías para que puedas elegir la que más se adapte a ti.</p>
+      
       </p>
     </main>
     <footer class="mt-5000">
