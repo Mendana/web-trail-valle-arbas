@@ -4,18 +4,21 @@
 <header class="sticky-menu flex items-center justify-between px-4 py-4 w-full">
   <div class="flex items-center gap-3 ml-2">
     <img src="/ms-icon-144x144.png" alt="Logo Valle de Arbas" class="h-12 w-12 object-contain" loading="lazy" />
-    <span class="font-bold text-2xl text-white">Valle de Arbas</span>
+    <span class="font-bold text-2xl text-black">Valle de Arbas</span>
   </div>
   <nav class="header-menu">
     <input type="checkbox" id="menu-toggle" class="hidden peer" />
-    <label for="menu-toggle" class="block md:hidden cursor-pointer text-white p-2">
+    <label for="menu-toggle" class="block lg:hidden cursor-pointer text-black p-2">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
     </label>
-    <ul class="menu-list flex-col md:flex-row md:flex hidden md:visible peer-checked:flex bg-[rgba(240, 240, 240, 0.08)] md:bg-transparent absolute md:static right-0 top-16 md:top-0 w-48 md:w-auto rounded md:rounded-none shadow-md md:shadow-none">
-      <li><a href="/" class="block px-4 py-2 text-white hover:bg-white/10">Inicio</a></li>
-      <li><a href="/info" class="block px-4 py-2 text-white hover:bg-white/10">Información</a></li>
-      <li><a href="/inscripcion" class="block px-4 py-2 text-white hover:bg-white/10">Inscripción</a></li>
-      <li><a href="/contacto" class="block px-4 py-2 text-white hover:bg-white/10">Contacto</a></li>
+    <ul class="menu-list flex-col hidden lg:visible peer-checked:flex absolute lg:static right-0 top-16 lg:top-0 w-48 lg:w-auto rounded lg:rounded-none shadow-md lg:shadow-none">
+      <li><a href="/" class="block px-4 py-2 text-white lg:text-black">Inicio</a></li>
+      <li><a href="/categorias" class="block px-4 py-2 text-white lg:text-black">Categorías</a></li>
+      <li><a href="/inscripcion" class="block px-4 py-2 text-white lg:text-black">Inscripción</a></li>
+      <li><a href="/normativa" class="block px-4 py-2 text-white lg:text-black">Normativa</a></li>
+      <li><a href="/horario" class="block px-4 py-2 text-white lg:text-black">Horario y Ubicaciones</a></li>
+      <li><a href="/resultados" class="block px-4 py-2 text-white lg:text-black">Fotos y Resultados</a></li>
+      <li><a href="/info" class="block px-4 py-2 text-white lg:text-black">Otros</a></li>
     </ul>
   </nav>
 </header>
@@ -49,7 +52,7 @@
   #menu-toggle:checked ~ .menu-list {
     display: flex;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     .menu-list {
       position: static;
       box-shadow: none;
@@ -57,9 +60,25 @@
       min-width: 0;
       flex-direction: row;
       display: flex !important;
+      background: transparent;
+      backdrop-filter: none;
+      gap: 1rem;
     }
     .header-menu label {
       display: none;
+    }
+
+    .menu-list li a:hover {
+      color: #e49a69;
+    }
+
+    .menu-list li {
+      width: fit-content;
+    }
+    .menu-list li a {
+      font-size: 1rem;
+      padding: 0px;
+      font-weight: 600;
     }
   }
 </style>
