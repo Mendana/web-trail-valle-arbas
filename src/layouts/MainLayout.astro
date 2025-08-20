@@ -4,6 +4,7 @@ import VideoHeader from '../components/VideoHeader.astro';
 import StickyMenu from '../components/StickyMenu.astro';
 import SimpleCarousel from '../components/SimpleCarousel.astro';
 import InfoSection from '../components/sections/InfoSection.astro';
+import MainFooter from '../components/MainFooter.astro';
 
 const { title, description } = Astro.props;
 ---
@@ -83,8 +84,8 @@ const { title, description } = Astro.props;
         ¡Te esperamos el 10 de Mayo para disfrutar juntos de este evento inolvidable!
       </p>
     </main>
-    <footer class="mt-5000">
-      <p>Gracias por visitar</p>
+    <footer>
+      <MainFooter />
     </footer>
   </body>
 </html>

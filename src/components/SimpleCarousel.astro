@@ -1,6 +1,8 @@
 ---
-// SimpleCarousel.astro - Carrusel de imágenes sin props, con imágenes predefinidas
-// Diseñado para ser incrustado en el layout
+import { Image } from "astro:assets"
+import carrusel1 from "../assets/imgCarrusel/carrusel1.jpg"
+import carrusel2 from "../assets/imgCarrusel/carrusel2.jpg"
+import carrusel3 from "../assets/imgCarrusel/carrusel3.jpg"
 ---
 
 <div class="carousel-container">
@@ -10,19 +12,19 @@
   <div class="carousel-viewport mt-2" id="carousel-viewport">
     <div class="carousel-track" id="carousel-track">
       <div class="carousel-slide">
-        <img
-          src="/imgCarrusel/carrusel1.jpg"
+        <Image
+          src={carrusel1}
           alt="Paisaje del Valle de Arbas"
           class="carousel-image"
         />
         <div class="carousel-caption">Valle de Arbas - Vista Panorámica</div>
       </div>
       <div class="carousel-slide">
-        <img src="/imgCarrusel/carrusel2.jpg" alt="Sendero de la carrera" class="carousel-image" />
+        <Image src={carrusel2} alt="Sendero de la carrera" class="carousel-image" />
         <div class="carousel-caption">Senderos naturales</div>
       </div>
       <div class="carousel-slide">
-        <img src="/imgCarrusel/carrusel3.jpg" alt="Participantes en meta" class="carousel-image" />
+        <Image src={carrusel3} alt="Participantes en meta" class="carousel-image" />
         <div class="carousel-caption">Edición anterior</div>
       </div>
     </div>

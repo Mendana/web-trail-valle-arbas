@@ -1,0 +1,82 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+---
+<BaseHead title="Página no encontrada" description="La página que buscas no existe." />
+
+<html lang="es">
+  <body class="notfound-bg">
+    <main class="notfound-container">
+      <h1 class="notfound-title text-gradient">404</h1>
+      <h2 class="notfound-subtitle">¡Vaya! No hemos encontrado la página</h2>
+      <p class="notfound-text">Puede que el enlace esté roto o la página haya sido movida.<br>Vuelve al inicio para seguir explorando el Valle de Arbas.</p>
+      <a href="/" class="notfound-btn">Volver al inicio</a>
+    </main>
+  </body>
+</html>
+
+<style>
+  .notfound-bg {
+    min-height: 100vh;
+    background: linear-gradient(120deg, #f8f8f8 60%, #f97316 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .notfound-container {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+    padding: 48px 32px;
+    max-width: 420px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .notfound-title {
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(270deg, #f96742, #e49a69, #f96742);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-move 6s linear infinite;
+  }
+  .notfound-subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #e49a69;
+    margin-bottom: 0.5rem;
+  }
+  .notfound-text {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  .notfound-btn {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background: #f97316;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(249,115,22,0.10);
+    transition: background 0.3s, transform 0.2s;
+  }
+  .notfound-btn:hover {
+    background: #e49a69;
+    transform: translateY(-2px) scale(1.04);
+  }
+  @keyframes gradient-move {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 200% 50%;
+    }
+  }
+</style>
