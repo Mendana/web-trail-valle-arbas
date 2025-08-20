@@ -1,0 +1,75 @@
+---
+const { icon, title, description, link } = Astro.props;
+---
+
+<div class="flex flex-col items-center justify-center gap-2 main-container">
+  <svg
+    class="w-9 h-9 text-[#e49a69] mb-1"
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+  >
+    <path
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d={icon}></path>
+  </svg>
+
+  <h4 class="text-xl font-bold text-center">{title}</h4>
+  <p class="text-lg text-center">{description}</p>
+  <a href={link} class="button-link">
+    <button
+      class="mt-2 px-6 py-2 bg-[#e49a69] text-white rounded hover:bg-[#d88b5c] transition-colors focus:ring-2 focus:ring-[#e49a69] focus:ring-opacity-50 cursor-pointer"
+    >
+      Más información
+    </button>
+  </a>
+</div>
+
+<style>
+  .main-container {
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .main-container:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+  }
+  
+  .button-link {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  button {
+    position: relative;
+    overflow: hidden;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+</style>
