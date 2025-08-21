@@ -1,8 +1,8 @@
 ---
-import { Image } from "astro:assets"
-import carrusel1 from "../assets/imgCarrusel/carrusel1.jpg"
-import carrusel2 from "../assets/imgCarrusel/carrusel2.jpg"
-import carrusel3 from "../assets/imgCarrusel/carrusel3.jpg"
+import { Image } from 'astro:assets';
+import carrusel1 from '../assets/imgCarrusel/carrusel1.jpg';
+import carrusel2 from '../assets/imgCarrusel/carrusel2.jpg';
+import carrusel3 from '../assets/imgCarrusel/carrusel3.jpg';
 ---
 
 <div class="carousel-container">
@@ -16,15 +16,16 @@ import carrusel3 from "../assets/imgCarrusel/carrusel3.jpg"
           src={carrusel1}
           alt="Paisaje del Valle de Arbas"
           class="carousel-image"
+          loading="lazy"
         />
         <div class="carousel-caption">Valle de Arbas - Vista Panorámica</div>
       </div>
       <div class="carousel-slide">
-        <Image src={carrusel2} alt="Sendero de la carrera" class="carousel-image" />
+        <Image src={carrusel2} alt="Sendero de la carrera" class="carousel-image" loading="lazy" />
         <div class="carousel-caption">Senderos naturales</div>
       </div>
       <div class="carousel-slide">
-        <Image src={carrusel3} alt="Participantes en meta" class="carousel-image" />
+        <Image src={carrusel3} alt="Participantes en meta" class="carousel-image" loading="lazy" />
         <div class="carousel-caption">Edición anterior</div>
       </div>
     </div>
