@@ -1,3 +1,28 @@
 ---
-const { title, description, image } = Astro.props;
+const { title, description, image, imgTitle } = Astro.props;
+import ImageHeader from "../components/ImageHeader.astro";
+import BaseHead from '../components/BaseHead.astro';
+import StickyMenu from '../components/StickyMenu.astro';
+import MainFooter from '../components/MainFooter.astro';
 ---
+<!DOCTYPE html>
+<html lang="es">
+  <BaseHead title={title} description={description}/>
+  <body>
+    <StickyMenu class="stiky" />
+    <ImageHeader imgName={image} title={imgTitle} />
+    <main>
+      <slot />
+    </main>
+    <footer>
+        <MainFooter/>
+    </footer>
+  </body>
+</html>
+<style>
+  .stiky {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+</style>

@@ -1,0 +1,98 @@
+---
+const { name, description, distance, uphill } = Astro.props;
+---
+<div class="distance-card">
+  <h3 class="distance-title">{name}</h3>
+  <p class="distance-description">{description}</p>
+  <div class="distance-bottom">
+    <div class="distance-item">
+      <svg fill="#e49a69" width="22" height="22" viewBox="0 0 480.543 480.543" class="distance-icon">
+        <path d="M225.278,278.426c0-48.641-39.572-88.213-88.214-88.213c-48.641,0-88.212,39.572-88.212,88.213 c0,14.254,3.401,27.727,9.431,39.654l78.781,162.463l78.795-162.488C221.88,306.133,225.278,292.669,225.278,278.426z M137.064,327.243c-26.917,0-48.817-21.9-48.817-48.817s21.9-48.817,48.817-48.817c26.918,0,48.817,21.9,48.817,48.817 S163.982,327.243,137.064,327.243z"></path>
+      </svg>
+      <span class="distance-label">{distance} km</span>
+    </div>
+    <div class="distance-item">
+      <!-- Aquí puedes poner tu SVG personalizado para desnivel -->
+      <svg fill="#e49a69" width="22" height="22" viewBox="0 0 24 24" class="distance-icon">
+        <circle cx="12" cy="12" r="10" stroke="#e49a69" stroke-width="2" fill="none" />
+        <path d="M6 16l6-8 6 8" stroke="#e49a69" stroke-width="2" fill="none" />
+      </svg>
+      <span class="distance-label">{uphill} m+</span>
+    </div>
+  </div>
+</div>
+
+<style>
+.distance-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(228, 154, 105, 0.10);
+  padding: 2rem 1.5rem;
+  margin: 1rem 0;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.distance-card:hover {
+  box-shadow: 0 8px 32px rgba(228, 154, 105, 0.18);
+  transform: translateY(-2px) scale(1.02);
+}
+.distance-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e49a69;
+  margin: 0;
+  text-align: left;
+}
+.distance-description {
+  color: #444;
+  font-size: 1rem;
+  margin: 0.5rem 0 0 0;
+  text-align: left;
+}
+.distance-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 1.2rem;
+}
+.distance-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  color: #e49a69;
+  font-weight: 500;
+}
+.distance-icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+.distance-label {
+  color: #e49a69;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+@media (max-width: 600px) {
+  .distance-card {
+    padding: 1.2rem 0.7rem;
+    max-width: 100%;
+  }
+  .distance-title {
+    font-size: 1.2rem;
+  }
+  .distance-label {
+    font-size: 1rem;
+  }
+  .distance-bottom {
+    gap: 1rem;
+  }
+}
+</style>
+
