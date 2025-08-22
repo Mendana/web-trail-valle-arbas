@@ -19,263 +19,406 @@ import carousel3 from '../assets/imgCarrusel/carrusel3.jpg';
   image="HeaderCategorias"
   imgTitle="Categorías y Distancias"
 >
-
-<section>
-  <div class="title-center pt-4">
-    <h2 class="text-2xl font-bold title-underline mt-8 mb-4">3 Distancias</h2>
-  </div>
-  Hemos preparado varias categorías en el trail para que puedas elegir la que más se adapte a ti. Desde
-  10km hasta 42km, para todos los niveles.
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
-    <DistanceField
-      name="Trail Arbas Infinito"
-      ,
-      description="Nuestro recorrido más exigente, para los más valientes y preparados."
-      ,
-      distance="23"
-      ,
-      uphill="+2000"
-      ,
-      link="arbas-infinito"
-    />
-    <DistanceField
-      name="Trail Arbas-Luna"
-      ,
-      description="Un recorrido desafiante para disfrutar del valle de Arbas."
-      ,
-      distance="12,5"
-      ,
-      uphill="850"
-      ,
-      link="arbas-luna"
-    />
-    <DistanceField
-      name="Trail “Sierra del Alceo”"
-      ,
-      description="Pensado para que los cadetes puedan disfrutar de la montaña y la velocidad"
-      ,
-      distance="7,5"
-      ,
-      uphill="350"
-      ,
-      link="sierra-alceo"
-    />
-    <DistanceField
-      name="Trail “Camino de la Cuencha”"
-      ,
-      description="Recorrido rápido y divertido para los participantes de la categoría infantil"
-      ,
-      distance="4,5"
-      ,
-      uphill="190"
-      ,
-      link="camino-cuencha"
-    />
-  </div>
-</section>
-
-<section>
-  <article id="arbas-infinito" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
+  <section>
     <div class="title-center pt-4">
-      <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">Trail Arbas Infinito</h2>
+      <h2 class="text-2xl font-bold title-underline mt-8 mb-4">3 Distancias</h2>
     </div>
-    <p class="info-text mb-2">
-      Esta carrera recorre de oeste a este el Valle de Arbas, dentro de la <strong
-        >Reserva de la Biosfera del Alto Bernesga</strong
-      >, y se adentra en el pintoresco valle de Caldas de Luna, en el <strong
-        >Parque Natural de Babia y Luna</strong
-      >. El recorrido tiene como punto central <strong>Cubillas de Arbas</strong>, donde coinciden
-      la salida, la meta y el paso intermedio, compartiendo este tramo inicial con la prueba
-      Arbas–Luna.
+    <p class="info-text w-[90%] text-center max-w-[1200px]">
+      Hemos preparado varias categorías en el trail para que puedas elegir la que más se adapte a
+      ti. Desde 10km hasta 42km, para todos los niveles.
     </p>
-    <Carousel
-      images={[
-        {
-          src: carousel1,
-          alt: 'Paisaje del Valle de Arbas',
-          caption: 'Valle de Arbas - Vista Panorámica',
-        },
-        { src: carousel2, alt: 'Sendero de la carrera', caption: 'Senderos naturales' },
-        { src: carousel3, alt: 'Participantes en meta', caption: 'Edición anterior' },
-      ]}
-    />
-    <p class="info-text pt-4">
-      El trazado presenta dos partes bien diferenciadas: la primera, hasta el paso intermedio,
-      discurre por senderos y caminos entre praderas; la segunda es más técnica, con senderos que
-      atraviesan laderas herbosas y zonas calizas.
-    </p>
-    <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
-    <div class="flex flex-col gap-2">
-      <Image
-        src={PerfilInfinito}
-        alt="Perfil de la carrera Trail Arbas Infinito"
-        class="w-full h-auto mb-4"
-        loading="lazy"
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
+      <DistanceField
+        name="Trail Arbas Infinito"
+        ,
+        description="Nuestro recorrido más exigente, para los más valientes y preparados."
+        ,
+        distance="23"
+        ,
+        uphill="+2000"
+        ,
+        link="arbas-infinito"
       />
-      <ul>
-        <li>
-          <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
-          Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el recorrido sigue un camino
-          ganadero, para después continuar por una senda herbosa paralela a un arroyo hasta el collado.
-        </li>
-
-        <li>
-          <strong>Collado Ferreras (km 2,5) – Sena de Luna (km 5):</strong>
-          Bajada rápida de 450 m de desnivel por un sendero herboso hasta el refugio ganadero (km 4),
-          y después por pista hasta las proximidades de la autopista.
-        </li>
-
-        <li>
-          <strong>Sena de Luna (km 5) – Collado Aronga (km 8):</strong>
-          Subida de 400 m de desnivel por sendas ganaderas a través de praderas de montaña.
-        </li>
-
-        <li>
-          <strong>Collado Aronga (km 8) – Cubillas de Arbas (km 12,5):</strong>
-          Descenso de 320 m de desnivel. Al inicio, una senda utilizada por escaladores para acceder
-          a las Peñas de Prado conduce hasta la carretera. Desde allí se enlaza con una senda que llega
-          al túnel de Alceo. Tras superar un ascenso de 80 m por la Sierra de Alceo, el antiguo <strong
-            >Camino de los Carros</strong
-          > conduce de vuelta a Cubillas.
-        </li>
-      </ul>
-
-      <h4 class="text-center text-lg font-semibold lg:text-xl">Fin del primer bucle</h4>
-
-      <ul>
-        <li>
-          <strong>Cubillas de Arbas (km 12,5) – Pico la Brazosa (km 15):</strong>
-          Subida de 620 m. El trazado comienza por el camino de la Ferreta, rodea la Peña El Castillo
-          y asciende con fuerte pendiente hasta la cima.
-        </li>
-
-        <li>
-          <strong>Pico la Brazosa (km 15) – Peña Ortigal / Peña Esquina (km 16):</strong>
-          Tramo de 1 km por sendas ganaderas: 120 m de bajada y 130 m de subida. Los últimos 100 m son
-          más técnicos, sobre roca caliza.
-        </li>
-
-        <li>
-          <strong>Peña Ortigal (km 16) – Refugio de las Tres Marías (km 17,5):</strong>
-          Descenso de 400 m. El inicio es técnico sobre roca caliza (100 m), pero pronto se convierte
-          en senda herbosa que permite correr con fluidez.
-        </li>
-
-        <li>
-          <strong>Refugio Tres Marías (km 17,5) – Collada del Palero:</strong>
-          Ascenso exigente de 330 m de desnivel por una senda técnica que atraviesa terreno calizo.
-        </li>
-
-        <li>
-          <strong>Refugio Tres Marías (km 17,5) – Cubillas de Arbas (km 23,5):</strong>
-          Descenso por un espectacular sendero en la cara oeste, entre el Palero y la María del Medio.
-          Una bajada directa de 400 m de desnivel hasta el fondo del valle, para enlazar con un camino
-          que lleva a meta en menos de 600 m (con un ligero ascenso final de 30 m).
-        </li>
-      </ul>
-    </div>
-
-    <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
-    <ul class="list-disc">
-      <li><strong>Collado Ferreras:</strong> control y avituallamiento líquido.</li>
-      <li><strong>Caldas de Luna:</strong> control y avituallamiento líquido.</li>
-      <li><strong>Collada de Aronga:</strong> sin control.</li>
-      <li><strong>Cruce de carretera:</strong> punto de control.</li>
-      <li>
-        <strong>Cubillas de Arbas (paso intermedio):</strong> control y avituallamiento líquido y sólido.
-      </li>
-      <li><strong>Cima de la Peña la Brazosa:</strong> punto de control.</li>
-      <li><strong>Cima de Peña Ortigal:</strong> punto de control.</li>
-      <li>
-        <strong>Refugio de las Tres Marías:</strong> control y avituallamiento líquido y sólido.
-      </li>
-      <li><strong>Meta en Cubillas de Arbas:</strong> avituallamiento líquido y sólido.</li>
-    </ul>
-    <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
-    <p class="info-text">
-      El primer bucle se estima en torno a <strong>1 hora y 30 minutos</strong> para los corredores más
-      rápidos. El segundo bucle será más exigente, con un tiempo aproximado de <strong
-        >2 horas</strong
-      >. El tiempo máximo de carrera se establece en <strong>5 horas y 30 minutos</strong>.
-    </p>
-  </article>
-  <article id="arbas-luna" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
-    <div class="title-center pt-4">
-      <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">Trail Arbas-Luna</h2>
-    </div>
-    <p class="info-text mb-2">
-      Esta modalidad está pensada para corredores que prefieren una distancia más corta, rápida y
-      con menor exigencia técnica. El recorrido, de 12,5 kilómetros, atraviesa los <strong
-        >valles de Arbas</strong
-      > y <strong>Caldas de Luna</strong>, ofreciendo magníficas vistas de cumbres emblemáticas como
-      la <strong>Bargaña</strong>, las <strong>Peñas de Prado</strong> o el <strong>Cirbanal</strong
-      >, entre otras.
-    </p>
-    <Carousel
-      images={[
-        {
-          src: carousel1,
-          alt: 'Paisaje del Valle de Arbas',
-          caption: 'Valle de Arbas - Vista Panorámica',
-        },
-        { src: carousel2, alt: 'Sendero de la carrera', caption: 'Senderos naturales' },
-        { src: carousel3, alt: 'Participantes en meta', caption: 'Edición anterior' },
-      ]}
-    />
-    <p class="info-text pt-4">
-      El trazado combina dos fuertes repechos con dos descensos muy rápidos, lo que la convierte en
-      una carrera intensa y dinámica.
-    </p>
-    <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
-    <div class="flex flex-col gap-2">
-      <Image
-        src={PerfilLuna}
-        alt="Perfil de la carrera Trail Arbas-Luna"
-        class="w-full h-auto mb-4"
-        loading="lazy"
+      <DistanceField
+        name="Trail Arbas-Luna"
+        ,
+        description="Un recorrido desafiante para disfrutar del valle de Arbas."
+        ,
+        distance="12,5"
+        ,
+        uphill="850"
+        ,
+        link="arbas-luna"
       />
-      <ul>
-        <li>
-          <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
-          Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el trazado sigue un camino
-          ganadero, y desde allí continúa por una senda herbosa paralela a un pequeño arroyo hasta el
-          collado.
-        </li>
-
-        <li>
-          <strong>Collado Ferreras (km 2,5) – Sena de Luna (km 5):</strong>
-          Descenso rápido de 450 m de desnivel. El tramo comienza por un sendero herboso hasta el refugio
-          ganadero (km 4) y después enlaza con una pista que llega casi hasta la autopista.
-        </li>
-
-        <li>
-          <strong>Sena de Luna (km 5) – Collado Aronga (km 8):</strong>
-          Subida de 400 m de desnivel por sendas ganaderas que atraviesan zonas herbosas.
-        </li>
-
-        <li>
-          <strong>Collado Aronga (km 8) – Cubillas de Arbas (km 12):</strong>
-          Bajada de 320 m de desnivel. Al inicio, una senda utilizada por escaladores conduce a las vías
-          de las Peñas de Prado y baja hasta la carretera. Desde allí, se toma una senda hacia el túnel
-          de Alceo, se ascienden 80 m por la Sierra de Alceo y, finalmente, el antiguo <em
-            >Camino de los Carros</em
-          > lleva de regreso al pueblo de Cubillas.
-        </li>
-      </ul>
+      <DistanceField
+        name="Trail “Sierra del Alceo”"
+        ,
+        description="Pensado para que los cadetes puedan disfrutar de la montaña y la velocidad"
+        ,
+        distance="7,5"
+        ,
+        uphill="350"
+        ,
+        link="alceo"
+      />
+      <DistanceField
+        name="Trail “Camino de la Cuencha”"
+        ,
+        description="Recorrido rápido y divertido para los participantes de la categoría infantil"
+        ,
+        distance="4,5"
+        ,
+        uphill="190"
+        ,
+        link="cuencha"
+      />
     </div>
+  </section>
 
-    <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
-    <ul class="list-disc">
-      <li><strong>Collado Ferreras:</strong> control y avituallamiento líquido.</li>
-      <li><strong>Caldas de Luna:</strong> control y avituallamiento líquido y sólido.</li>
-      <li><strong>Collada de Aronga:</strong> sin control.</li>
-      <li><strong>Cruce de carretera:</strong> punto de control.</li>
-      <li><strong>Meta en Cubillas de Arbas:</strong> avituallamiento líquido y sólido.</li>
-    </ul>
-    <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
-    <p class="info-text mb-20">Tiempos?</p>
-  </article>
-</section>
+  <section>
+    <article id="arbas-infinito" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
+      <div class="title-center pt-4">
+        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">
+          Trail Arbas Infinito
+        </h2>
+      </div>
+      <p class="info-text mb-2">
+        Esta carrera recorre de oeste a este el Valle de Arbas, dentro de la <strong
+          >Reserva de la Biosfera del Alto Bernesga</strong
+        >, y se adentra en el pintoresco valle de Caldas de Luna, en el <strong
+          >Parque Natural de Babia y Luna</strong
+        >. El recorrido tiene como punto central <strong>Cubillas de Arbas</strong>, donde coinciden
+        la salida, la meta y el paso intermedio, compartiendo este tramo inicial con la prueba
+        Arbas–Luna.
+      </p>
+      <Carousel
+        images={[
+          {
+            src: carousel1,
+            alt: 'Paisaje del Valle de Arbas',
+            caption: 'Valle de Arbas - Vista Panorámica',
+          },
+          { src: carousel2, alt: 'Sendero de la carrera', caption: 'Senderos naturales' },
+          { src: carousel3, alt: 'Participantes en meta', caption: 'Edición anterior' },
+        ]}
+      />
+      <p class="info-text pt-4">
+        El trazado presenta dos partes bien diferenciadas: la primera, hasta el paso intermedio,
+        discurre por senderos y caminos entre praderas; la segunda es más técnica, con senderos que
+        atraviesan laderas herbosas y zonas calizas.
+      </p>
+      <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
+      <div class="flex flex-col gap-2">
+        <Image
+          src={PerfilInfinito}
+          alt="Perfil de la carrera Trail Arbas Infinito"
+          class="w-full h-auto mb-4"
+          loading="lazy"
+        />
+        <ul>
+          <li>
+            <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
+            Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el recorrido sigue un camino
+            ganadero, para después continuar por una senda herbosa paralela a un arroyo hasta el collado.
+          </li>
+
+          <li>
+            <strong>Collado Ferreras (km 2,5) – Sena de Luna (km 5):</strong>
+            Bajada rápida de 450 m de desnivel por un sendero herboso hasta el refugio ganadero (km 4),
+            y después por pista hasta las proximidades de la autopista.
+          </li>
+
+          <li>
+            <strong>Sena de Luna (km 5) – Collado Aronga (km 8):</strong>
+            Subida de 400 m de desnivel por sendas ganaderas a través de praderas de montaña.
+          </li>
+
+          <li>
+            <strong>Collado Aronga (km 8) – Cubillas de Arbas (km 12,5):</strong>
+            Descenso de 320 m de desnivel. Al inicio, una senda utilizada por escaladores para acceder
+            a las Peñas de Prado conduce hasta la carretera. Desde allí se enlaza con una senda que llega
+            al túnel de Alceo. Tras superar un ascenso de 80 m por la Sierra de Alceo, el antiguo <strong
+              >Camino de los Carros</strong
+            > conduce de vuelta a Cubillas.
+          </li>
+        </ul>
+
+        <h4 class="text-center text-lg font-semibold lg:text-xl">Fin del primer bucle</h4>
+
+        <ul>
+          <li>
+            <strong>Cubillas de Arbas (km 12,5) – Pico la Brazosa (km 15):</strong>
+            Subida de 620 m. El trazado comienza por el camino de la Ferreta, rodea la Peña El Castillo
+            y asciende con fuerte pendiente hasta la cima.
+          </li>
+
+          <li>
+            <strong>Pico la Brazosa (km 15) – Peña Ortigal / Peña Esquina (km 16):</strong>
+            Tramo de 1 km por sendas ganaderas: 120 m de bajada y 130 m de subida. Los últimos 100 m
+            son más técnicos, sobre roca caliza.
+          </li>
+
+          <li>
+            <strong>Peña Ortigal (km 16) – Refugio de las Tres Marías (km 17,5):</strong>
+            Descenso de 400 m. El inicio es técnico sobre roca caliza (100 m), pero pronto se convierte
+            en senda herbosa que permite correr con fluidez.
+          </li>
+
+          <li>
+            <strong>Refugio Tres Marías (km 17,5) – Collada del Palero:</strong>
+            Ascenso exigente de 330 m de desnivel por una senda técnica que atraviesa terreno calizo.
+          </li>
+
+          <li>
+            <strong>Refugio Tres Marías (km 17,5) – Cubillas de Arbas (km 23,5):</strong>
+            Descenso por un espectacular sendero en la cara oeste, entre el Palero y la María del Medio.
+            Una bajada directa de 400 m de desnivel hasta el fondo del valle, para enlazar con un camino
+            que lleva a meta en menos de 600 m (con un ligero ascenso final de 30 m).
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
+      <ul class="list-disc">
+        <li><strong>Collado Ferreras:</strong> control y avituallamiento líquido.</li>
+        <li><strong>Caldas de Luna:</strong> control y avituallamiento líquido.</li>
+        <li><strong>Collada de Aronga:</strong> sin control.</li>
+        <li><strong>Cruce de carretera:</strong> punto de control.</li>
+        <li>
+          <strong>Cubillas de Arbas (paso intermedio):</strong> control y avituallamiento líquido y sólido.
+        </li>
+        <li><strong>Cima de la Peña la Brazosa:</strong> punto de control.</li>
+        <li><strong>Cima de Peña Ortigal:</strong> punto de control.</li>
+        <li>
+          <strong>Refugio de las Tres Marías:</strong> control y avituallamiento líquido y sólido.
+        </li>
+        <li><strong>Meta en Cubillas de Arbas:</strong> avituallamiento líquido y sólido.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
+      <p class="info-text">
+        El primer bucle se estima en torno a <strong>1 hora y 30 minutos</strong> para los corredores
+        más rápidos. El segundo bucle será más exigente, con un tiempo aproximado de <strong
+          >2 horas</strong
+        >. El tiempo máximo de carrera se establece en <strong>5 horas y 30 minutos</strong>.
+      </p>
+    </article>
+    <article id="arbas-luna" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
+      <div class="title-center pt-4">
+        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">Trail Arbas-Luna</h2>
+      </div>
+      <p class="info-text mb-2">
+        Esta modalidad está pensada para corredores que prefieren una distancia más corta, rápida y
+        con menor exigencia técnica. El recorrido, de 12,5 kilómetros, atraviesa los <strong
+          >valles de Arbas</strong
+        > y <strong>Caldas de Luna</strong>, ofreciendo magníficas vistas de cumbres emblemáticas
+        como la <strong>Bargaña</strong>, las <strong>Peñas de Prado</strong> o el <strong
+          >Cirbanal</strong
+        >, entre otras.
+      </p>
+      <Carousel
+        images={[
+          {
+            src: carousel1,
+            alt: 'Paisaje del Valle de Arbas',
+            caption: 'Valle de Arbas - Vista Panorámica',
+          },
+          { src: carousel2, alt: 'Sendero de la carrera', caption: 'Senderos naturales' },
+          { src: carousel3, alt: 'Participantes en meta', caption: 'Edición anterior' },
+        ]}
+      />
+      <p class="info-text pt-4">
+        El trazado combina dos fuertes repechos con dos descensos muy rápidos, lo que la convierte
+        en una carrera intensa y dinámica.
+      </p>
+      <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
+      <div class="flex flex-col gap-2">
+        <Image
+          src={PerfilLuna}
+          alt="Perfil de la carrera Trail Arbas-Luna"
+          class="w-full h-auto mb-4"
+          loading="lazy"
+        />
+        <ul>
+          <li>
+            <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
+            Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el trazado sigue un camino
+            ganadero, y desde allí continúa por una senda herbosa paralela a un pequeño arroyo hasta
+            el collado.
+          </li>
+
+          <li>
+            <strong>Collado Ferreras (km 2,5) – Sena de Luna (km 5):</strong>
+            Descenso rápido de 450 m de desnivel. El tramo comienza por un sendero herboso hasta el refugio
+            ganadero (km 4) y después enlaza con una pista que llega casi hasta la autopista.
+          </li>
+
+          <li>
+            <strong>Sena de Luna (km 5) – Collado Aronga (km 8):</strong>
+            Subida de 400 m de desnivel por sendas ganaderas que atraviesan zonas herbosas.
+          </li>
+
+          <li>
+            <strong>Collado Aronga (km 8) – Cubillas de Arbas (km 12):</strong>
+            Bajada de 320 m de desnivel. Al inicio, una senda utilizada por escaladores conduce a las
+            vías de las Peñas de Prado y baja hasta la carretera. Desde allí, se toma una senda hacia
+            el túnel de Alceo, se ascienden 80 m por la Sierra de Alceo y, finalmente, el antiguo <em
+              >Camino de los Carros</em
+            > lleva de regreso al pueblo de Cubillas.
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
+      <ul class="list-disc">
+        <li><strong>Collado Ferreras:</strong> control y avituallamiento líquido.</li>
+        <li><strong>Caldas de Luna:</strong> control y avituallamiento líquido y sólido.</li>
+        <li><strong>Collada de Aronga:</strong> sin control.</li>
+        <li><strong>Cruce de carretera:</strong> punto de control.</li>
+        <li><strong>Meta en Cubillas de Arbas:</strong> avituallamiento líquido y sólido.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
+      <p class="info-text mb-20">Tiempos?</p>
+    </article>
+    <article id="alceo" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
+      <h2 class="text-2xl font-bold text-[#e49a69] text-center">Categorías inferiores</h2>
+      <div class="title-center pt-4 flex flex-col items-center">
+        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">
+          Trail "Sierra del Alceo"
+        </h2>
+        <h3 class="text-xl font-semibold text-[#e49a69] mb-4">Categoría cadete</h3>
+      </div>
+      <p class="info-text mb-2">
+        Se trata de un recorrido pensado para que los más jóvenes disfruten de la montaña y de la
+        velocidad. Combina tramos técnicos con otros muy rápidos, ofreciendo una experiencia variada
+        y divertida. Las vistas del valle desde la <strong>Sierra de Alceo</strong> son espectaculares
+        y bien merecerían una pausa… ¡aunque seguramente nadie quiera detenerse!
+      </p>
+      <Carousel
+        images={[
+          {
+            src: carousel1,
+            alt: 'Paisaje del Valle de Arbas',
+            caption: 'Valle de Arbas - Vista Panorámica',
+          },
+          { src: carousel2, alt: 'Sendero de la carrera', caption: 'Senderos naturales' },
+          { src: carousel3, alt: 'Participantes en meta', caption: 'Edición anterior' },
+        ]}
+      />
+      <p class="info-text pt-4">Breve descripción del recorrido de la carrera.</p>
+      <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
+      <div class="flex flex-col gap-2">
+        <Image
+          src={PerfilLuna}
+          alt="Perfil de la carrera Trail Arbas-Luna"
+          class="w-full h-auto mb-4"
+          loading="lazy"
+        />
+        <ul>
+          <li>
+            <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
+            Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el trazado sigue un camino
+            ganadero, y desde allí continúa por una senda herbosa paralela a un pequeño arroyo hasta
+            el collado.
+          </li>
+
+          <li>
+            <strong>Collado Ferreras (km 2,5) – Sena de Luna (km 5):</strong>
+            Descenso rápido de 450 m de desnivel. El tramo comienza por un sendero herboso hasta el refugio
+            ganadero (km 4) y después enlaza con una pista que llega casi hasta la autopista.
+          </li>
+
+          <li>
+            <strong>Sena de Luna (km 5) – Collado Aronga (km 8):</strong>
+            Subida de 400 m de desnivel por sendas ganaderas que atraviesan zonas herbosas.
+          </li>
+
+          <li>
+            <strong>Collado Aronga (km 8) – Cubillas de Arbas (km 12):</strong>
+            Bajada de 320 m de desnivel. Al inicio, una senda utilizada por escaladores conduce a las
+            vías de las Peñas de Prado y baja hasta la carretera. Desde allí, se toma una senda hacia
+            el túnel de Alceo, se ascienden 80 m por la Sierra de Alceo y, finalmente, el antiguo <em
+              >Camino de los Carros</em
+            > lleva de regreso al pueblo de Cubillas.
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
+      <ul class="list-disc">
+        <li><strong>Collado Ferreras:</strong> control y avituallamiento líquido.</li>
+        <li><strong>Caldas de Luna:</strong> control y avituallamiento líquido y sólido.</li>
+        <li><strong>Collada de Aronga:</strong> sin control.</li>
+        <li><strong>Cruce de carretera:</strong> punto de control.</li>
+        <li><strong>Meta en Cubillas de Arbas:</strong> avituallamiento líquido y sólido.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
+      <p class="info-text mb-20">Tiempos?</p>
+    </article>
+    <article id="cuencha" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
+      <div class="title-center pt-4 flex flex-col items-center">
+        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 text-center lg:text-3xl">
+          Trail "Camino de la Cuencha"
+        </h2>
+        <h3 class="text-xl font-semibold text-[#e49a69] mb-4">Categoría infantil</h3>
+      </div>
+      <p class="info-text mb-2">
+        Se trata de un recorrido rápido y accesible, que transcurre por sendas y caminos fáciles de
+        transitar. El trazado conduce hasta uno de los miradores más espectaculares del valle, donde
+        la recompensa son unas vistas inolvidables. ¡Una experiencia para disfrutar al máximo!
+      </p>
+      <Carousel
+        images={[
+          {
+            src: carousel1,
+            alt: 'Paisaje del Valle de Arbas',
+            caption: 'Valle de Arbas - Vista Panorámica',
+          },
+          { src: carousel2, alt: 'Sendero de la carrera', caption: 'Senderos naturales' },
+          { src: carousel3, alt: 'Participantes en meta', caption: 'Edición anterior' },
+        ]}
+      />
+      <p class="info-text pt-4">Breve descripción del recorrido de la carrera.</p>
+      <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
+      <div class="flex flex-col gap-2">
+        <Image
+          src={PerfilLuna}
+          alt="Perfil de la carrera Trail Arbas-Luna"
+          class="w-full h-auto mb-4"
+          loading="lazy"
+        />
+        <ul>
+          <li>
+            <strong>Cubillas de Arbas (km 0) – Cruce (km 1,5):</strong>
+            Salida desde el pueblo por un camino que enlaza con un sendero herboso, con 120 m de desnivel
+            positivo hasta alcanzar el cruce.
+          </li>
+
+          <li>
+            <strong>Cruce (km 1,5) – Arroyo Balagares (km 2,2):</strong>
+            Tramo por pista con 70 m de desnivel.
+          </li>
+
+          <li>
+            <strong>Arroyo Balagares (km 2,2) – Cruce (km 2,9):</strong>
+            Regreso por el mismo camino utilizado en la subida.
+          </li>
+
+          <li>
+            <strong>Cruce (km 2,9) – Cubillas de Arbas (km 4,5):</strong>
+            Descenso de 120 m de desnivel por pista hasta el pueblo.
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
+      <ul class="list-disc">
+        <li><strong>Cruce:</strong> punto de control.</li>
+        <li><strong>Arroyo Balagares:</strong> punto de control y avituallamiento líquido.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
+      <p class="info-text mb-20">Tiempos?</p>
+    </article>
+  </section>
 </BasePageLayout>
 <style>
   .title-underline {
