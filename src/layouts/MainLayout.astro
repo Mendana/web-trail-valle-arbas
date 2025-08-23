@@ -5,6 +5,7 @@ import StickyMenu from '../components/StickyMenu.astro';
 import Carousel from '../components/Carousel.astro';
 import InfoSection from '../components/sections/InfoSection.astro';
 import MainFooter from '../components/MainFooter.astro';
+import SponsorGrid from '../components/sponsors/SponsorGrid.astro';
 
 const { title, description } = Astro.props;
 
@@ -14,6 +15,73 @@ import carousel2 from '../assets/imgCarruselMainPage/carrusel2.jpg';
 import carousel3 from '../assets/imgCarruselMainPage/carrusel3.jpg';
 import carousel4 from '../assets/imgCarruselMainPage/carrusel4.jpg';
 import carousel5 from '../assets/imgCarruselMainPage/carrusel5.jpg';
+
+// Importación del tipo Sponsor
+import type { Sponsor } from '../components/sponsors/SponsorGrid.astro';
+
+// Definición de patrocinadores
+const sponsors: Sponsor[] = [
+  {
+    name: 'Ayuntamiento de Cubillas de Arbas',
+    logo: '/images/sponsors/ayuntamiento.png',
+    url: '#'
+  },
+  {
+    name: 'Diputación de León',
+    logo: '/images/sponsors/diputacion.png',
+    url: '#'
+  },
+  {
+    name: 'Deportes Castilla y León',
+    logo: '/images/sponsors/deportes.png',
+    url: '#'
+  },
+  {
+    name: 'Banco Regional',
+    logo: '/images/sponsors/banco.png',
+    url: '#'
+  },
+  {
+    name: 'Aseguradora Deportiva',
+    logo: '/images/sponsors/aseguradora.png',
+    url: '#'
+  },
+  {
+    name: 'Tienda de Deportes',
+    logo: '/images/sponsors/tienda-deportes.png',
+    url: '#'
+  },
+  {
+    name: 'Hotel Rural Valle de Arbas',
+    logo: '/images/sponsors/hotel.png',
+    url: '#'
+  },
+  {
+    name: 'Restaurante El Montañés',
+    logo: '/images/sponsors/restaurante.png',
+    url: '#'
+  },
+  {
+    name: 'Agua de Manantial',
+    logo: '/images/sponsors/agua.png',
+    url: '#'
+  },
+  {
+    name: 'Bebidas Energéticas',
+    logo: '/images/sponsors/bebidas.png',
+    url: '#'
+  },
+  {
+    name: 'Transportes Locales',
+    logo: '/images/sponsors/transporte.png',
+    url: '#'
+  },
+  {
+    name: 'Servicio Técnico',
+    logo: '/images/sponsors/tecnico.png',
+    url: '#'
+  }
+];
 ---
 
 <html lang="es">
@@ -108,11 +176,27 @@ import carousel5 from '../assets/imgCarruselMainPage/carrusel5.jpg';
         comunidad. ¡Te esperamos el 10 de Mayo para disfrutar juntos de este evento inolvidable!
       </p>
 
-      <h2 class="text-3xl font-bold text-center mt-16 mb-4">Nuestros patrocinadores</h2>
-      <p class="text-center text-base mb-8 w-[90%] mx-auto">
-        Agradecemos a nuestros patrocinadores por su apoyo en la realización de este evento. Esta carrera no sería posible sin ellos.
-      </p>
-      <p class="text-red-600">Añadir imágenes o lo que sea</p>
+      <section id="sponsors" class="sponsors-section py-16 mt-8 bg-gradient-to-b from-white to-gray-50">
+        <div class="sponsor-header text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Nuestros patrocinadores</h2>
+          <div class="w-24 h-1 bg-gradient-to-r from-[#f97316] to-[#e49a69] mx-auto mb-6"></div>
+          <p class="text-center text-base mb-4 w-[90%] mx-auto max-w-[800px]">
+            Agradecemos a nuestros patrocinadores por su apoyo en la realización de este evento. Esta carrera no sería posible sin ellos.
+          </p>
+        </div>
+        
+        <SponsorGrid sponsors={sponsors} />
+        
+        <div class="become-sponsor text-center mt-16 bg-white py-10 px-6 rounded-lg shadow-sm max-w-[900px] mx-auto">
+          <h3 class="text-2xl font-semibold mb-4">¿Te gustaría ser patrocinador?</h3>
+          <p class="text-base w-[90%] mx-auto max-w-[600px] mb-6">
+            Si tu empresa está interesada en patrocinar el Trail Valle de Arbas, no dudes en contactarnos. Tenemos diferentes opciones de patrocinio adaptadas a tus necesidades.
+          </p>
+          <a href="/contacto" class="inline-block px-8 py-3 bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold rounded-lg transition-all hover:shadow-lg hover:-translate-y-1 hover:from-[#e49a69] hover:to-[#f97316]">
+            Contacta con nosotros
+          </a>
+        </div>
+      </section>
     </main>
     <footer>
       <MainFooter />
