@@ -16,3 +16,111 @@ h6 {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
 }
+
+.header-video-container,
+.header-image-container {
+  position: relative;
+  overflow: hidden;
+  margin-top: -64px;
+  z-index: 1;
+}
+
+.header-video,
+.header-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.title-underline {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  margin: 20px auto;
+}
+.title-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f97316, #f4bb76, #f97316);
+  border-radius: 3px;
+}
+.title-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.info-text {
+  text-align: justify;
+  margin: 0 auto;
+  font-size: 0.98rem; /* o 0.9rem */
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 1rem;
+}
+.info-text strong {
+  color: #e49a69;
+  font-weight: 700;
+}
+
+ul:not(.menu-sticky-list):not(.footer-list) {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.2rem 0 1.2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+ul:not(.menu-sticky-list):not(.footer-list) li {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  background: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+ul:not(.menu-sticky-list):not(.footer-list) li::before {
+  content: '';
+  position: absolute;
+  left: 0.7rem;
+  top: 0.3rem;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #f97316 60%, #e49a69 100%);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(249, 115, 22, 0.1);
+}
+ul:not(.menu-sticky-list):not(.footer-list) li strong {
+  color: #e49a69;
+  font-weight: 700;
+}
+
+.button-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  position: relative;
+  overflow: hidden;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+button:active {
+  transform: translateY(0);
+}
