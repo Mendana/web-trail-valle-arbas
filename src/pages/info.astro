@@ -1,0 +1,406 @@
+---
+import '../styles/global.css';
+import BasePageLayout from '../layouts/BasePageLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import CallToAction from '../components/CallToAction.astro';
+---
+
+<BasePageLayout
+  title="Otras informaciones"
+  description="Información útil sobre alojamientos, restaurantes y actividades en el Valle de Arbas"
+  image="HeaderUbicaciones"
+  imgTitle="Otras informaciones"
+>
+  <section>
+    <SectionTitle 
+      title="Guía práctica para participantes"
+      subtitle="Todo lo que necesitas saber para disfrutar al máximo de tu experiencia en el Trail Valle de Arbas 2025: dónde dormir, comer y qué hacer antes o después de la carrera."
+    />
+
+    <article class="pt-10 w-[90%] mx-auto max-w-[1200px] mb-20">
+      <div class="mb-12 bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-gradient-to-r from-[#f97316] to-[#e49a69] px-6 py-4">
+          <h2 class="text-2xl font-bold text-white">Alojamientos</h2>
+        </div>
+        
+        <div class="p-6">
+          <p class="mb-6">
+            La zona del Valle de Arbas y alrededores ofrece diversas opciones de alojamiento para todos los gustos y presupuestos. Recomendamos reservar con antelación debido a la alta demanda durante el evento.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Alojamientos en Cubillas de Arbas -->
+            <div class="accommodation-section">
+              <h3 class="text-xl font-semibold mb-4 text-[#e49a69]">En Cubillas de Arbas</h3>
+              
+              <div class="accommodation-item mb-6 border-b border-gray-100 pb-4">
+                <h4 class="font-medium mb-1">Albergue Valle de Arbas</h4>
+                <p class="text-sm mb-2">Albergue rural con capacidad para 40 personas en habitaciones compartidas. Ideal para grupos.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="info-tag">A 100m de la salida</span>
+                  <span class="info-tag">Desde 18€/noche</span>
+                  <span class="info-tag">Desayuno incluido</span>
+                </div>
+                <div class="mt-3">
+                  <a href="#" class="text-[#f97316] hover:text-[#e49a69] text-sm font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    987 123 456
+                  </a>
+                </div>
+              </div>
+              
+              <div class="accommodation-item mb-6 border-b border-gray-100 pb-4">
+                <h4 class="font-medium mb-1">Casa Rural El Rincón del Valle</h4>
+                <p class="text-sm mb-2">Casa rural con encanto con 5 habitaciones dobles con baño privado.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="info-tag">A 300m de la salida</span>
+                  <span class="info-tag">Desde 60€/noche</span>
+                  <span class="info-tag">Desayuno opcional</span>
+                </div>
+                <div class="mt-3">
+                  <a href="#" class="text-[#f97316] hover:text-[#e49a69] text-sm font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    987 123 457
+                  </a>
+                </div>
+              </div>
+              
+              <div class="accommodation-item">
+                <h4 class="font-medium mb-1">Camping Valle de Arbas</h4>
+                <p class="text-sm mb-2">Zona de acampada habilitada durante los días del evento. Dispone de duchas, baños y zonas comunes.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="info-tag">A 1km de la salida</span>
+                  <span class="info-tag">10€/noche por tienda</span>
+                  <span class="info-tag">Servicios incluidos</span>
+                </div>
+                <div class="mt-3">
+                  <a href="#" class="text-[#f97316] hover:text-[#e49a69] text-sm font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                    Reserva en la web oficial
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Alojamientos en poblaciones cercanas -->
+            <div class="accommodation-section">
+              <h3 class="text-xl font-semibold mb-4 text-[#e49a69]">En poblaciones cercanas</h3>
+              
+              <div class="accommodation-item mb-6 border-b border-gray-100 pb-4">
+                <h4 class="font-medium mb-1">Hotel Rural Casa Mieres (Casares de Arbas)</h4>
+                <p class="text-sm mb-2">Hotel rural con habitaciones dobles y familiares con vistas a la montaña.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="info-tag">A 5km de Cubillas</span>
+                  <span class="info-tag">Desde 65€/noche</span>
+                  <span class="info-tag">Restaurante propio</span>
+                </div>
+                <div class="mt-3">
+                  <a href="#" class="text-[#f97316] hover:text-[#e49a69] text-sm font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    987 123 458
+                  </a>
+                </div>
+              </div>
+              
+              <div class="accommodation-item mb-6 border-b border-gray-100 pb-4">
+                <h4 class="font-medium mb-1">Hostal Ezequiel (Villamanín)</h4>
+                <p class="text-sm mb-2">Hostal tradicional con habitaciones sencillas pero confortables.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="info-tag">A 15km de Cubillas</span>
+                  <span class="info-tag">Desde 45€/noche</span>
+                  <span class="info-tag">Bar-restaurante</span>
+                </div>
+                <div class="mt-3">
+                  <a href="#" class="text-[#f97316] hover:text-[#e49a69] text-sm font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    987 123 459
+                  </a>
+                </div>
+              </div>
+              
+              <div class="accommodation-item">
+                <h4 class="font-medium mb-1">Apartamentos Rurales La Braña (Rodiezmo)</h4>
+                <p class="text-sm mb-2">Apartamentos rurales con capacidad de 2 a 6 personas, completamente equipados.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="info-tag">A 12km de Cubillas</span>
+                  <span class="info-tag">Desde 80€/noche</span>
+                  <span class="info-tag">Cocina equipada</span>
+                </div>
+                <div class="mt-3">
+                  <a href="#" class="text-[#f97316] hover:text-[#e49a69] text-sm font-medium flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                    </svg>
+                    www.apartamentoslabrania.com
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accommodation-note p-4 mt-8 border-l-4 border-[#e49a69] bg-orange-50">
+            <p class="text-sm">
+              <strong>Importante:</strong> La organización ha llegado a acuerdos con algunos de estos alojamientos para ofrecer descuentos a los participantes. Menciona el código "TRAILARBAS25" al hacer tu reserva.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-12 bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-gradient-to-r from-[#f97316] to-[#e49a69] px-6 py-4">
+          <h2 class="text-2xl font-bold text-white">Dónde comer</h2>
+        </div>
+        
+        <div class="p-6">
+          <p class="mb-6">
+            La gastronomía leonesa es uno de los grandes atractivos de la zona. Te recomendamos probar platos típicos como la cecina, el cocido montañés o las famosas sopas de ajo.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Restaurantes -->
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-[#e49a69]">Restaurantes</h3>
+              
+              <div class="restaurant-item mb-6">
+                <h4 class="font-medium mb-1">Restaurante La Majada (Cubillas de Arbas)</h4>
+                <p class="text-sm mb-2">Cocina tradicional leonesa con productos locales. Especialidad en carnes a la brasa.</p>
+                <div class="flex flex-wrap gap-3 mb-2">
+                  <span class="info-tag">A 200m de la meta</span>
+                  <span class="info-tag">Menú del día: 15€</span>
+                </div>
+                <div class="text-xs text-gray-600">
+                  <p><strong>Horario:</strong> 13:00-16:00 y 20:30-23:00</p>
+                  <p><strong>Teléfono:</strong> 987 123 460</p>
+                </div>
+              </div>
+              
+              <div class="restaurant-item mb-6">
+                <h4 class="font-medium mb-1">Bar Montaña (Cubillas de Arbas)</h4>
+                <p class="text-sm mb-2">Bar con raciones y platos combinados. Ideal para un almuerzo rápido.</p>
+                <div class="flex flex-wrap gap-3 mb-2">
+                  <span class="info-tag">En la plaza principal</span>
+                  <span class="info-tag">Raciones desde 8€</span>
+                </div>
+                <div class="text-xs text-gray-600">
+                  <p><strong>Horario:</strong> 08:00-00:00</p>
+                  <p><strong>Teléfono:</strong> 987 123 461</p>
+                </div>
+              </div>
+              
+              <div class="restaurant-item">
+                <h4 class="font-medium mb-1">Restaurante Casa Mieres (Casares de Arbas)</h4>
+                <p class="text-sm mb-2">Restaurante con encanto y vistas a la montaña. Cocina tradicional renovada.</p>
+                <div class="flex flex-wrap gap-3 mb-2">
+                  <span class="info-tag">A 5km de Cubillas</span>
+                  <span class="info-tag">Menú degustación: 30€</span>
+                </div>
+                <div class="text-xs text-gray-600">
+                  <p><strong>Horario:</strong> 13:00-15:30 y 20:00-22:30</p>
+                  <p><strong>Teléfono:</strong> 987 123 462</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Bares y otros -->
+            <div>
+              <h3 class="text-xl font-semibold mb-4 text-[#e49a69]">Bares y otros establecimientos</h3>
+              
+              <div class="restaurant-item mb-6">
+                <h4 class="font-medium mb-1">Cafetería El Descanso (Cubillas de Arbas)</h4>
+                <p class="text-sm mb-2">Cafetería con desayunos, bocadillos y repostería casera.</p>
+                <div class="flex flex-wrap gap-3 mb-2">
+                  <span class="info-tag">Frente a la iglesia</span>
+                  <span class="info-tag">Desayuno completo: 4€</span>
+                </div>
+                <div class="text-xs text-gray-600">
+                  <p><strong>Horario:</strong> 07:00-20:00</p>
+                  <p><strong>Teléfono:</strong> 987 123 463</p>
+                </div>
+              </div>
+              
+              <div class="restaurant-item mb-6">
+                <h4 class="font-medium mb-1">Sidrería El Roxín (Villamanín)</h4>
+                <p class="text-sm mb-2">Bar especializado en sidra asturiana con amplia carta de pinchos y tapas.</p>
+                <div class="flex flex-wrap gap-3 mb-2">
+                  <span class="info-tag">A 15km de Cubillas</span>
+                  <span class="info-tag">Tabla de quesos: 12€</span>
+                </div>
+                <div class="text-xs text-gray-600">
+                  <p><strong>Horario:</strong> 11:00-00:00</p>
+                  <p><strong>Teléfono:</strong> 987 123 464</p>
+                </div>
+              </div>
+              
+              <div class="restaurant-item">
+                <h4 class="font-medium mb-1">Carpa del Trail (durante el evento)</h4>
+                <p class="text-sm mb-2">Carpa instalada por la organización con servicio de comidas y bebidas.</p>
+                <div class="flex flex-wrap gap-3 mb-2">
+                  <span class="info-tag">Zona de meta</span>
+                  <span class="info-tag">Plato del corredor: incluido</span>
+                </div>
+                <div class="text-xs text-gray-600">
+                  <p><strong>Horario:</strong> Viernes 18:00-00:00 / Sábado 08:00-00:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="restaurant-note p-4 mt-8 border-l-4 border-[#e49a69] bg-orange-50">
+            <p class="text-sm">
+              <strong>Consejo:</strong> Durante el fin de semana de la carrera, recomendamos reservar mesa con antelación, especialmente para cenas, ya que los establecimientos suelen estar muy concurridos.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mb-12 bg-white rounded-lg shadow-md overflow-hidden">
+        <div class="bg-gradient-to-r from-[#f97316] to-[#e49a69] px-6 py-4">
+          <h2 class="text-2xl font-bold text-white">Qué hacer en la zona</h2>
+        </div>
+        
+        <div class="p-6">
+          <p class="mb-6">
+            El Valle de Arbas y su entorno ofrecen numerosas actividades para completar tu visita. Aprovecha tu estancia para conocer esta zona de la montaña leonesa.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Naturaleza -->
+            <div class="activity-section">
+              <h3 class="text-xl font-semibold mb-4 text-[#e49a69]">Naturaleza</h3>
+              
+              <div class="activity-item mb-6">
+                <h4 class="font-medium mb-2">Ruta de las Hoces de Vegacervera</h4>
+                <p class="text-sm">Impresionante desfiladero calizo con pasarelas y un recorrido apto para todos los públicos.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Distancia desde Cubillas:</strong> 30km</p>
+                  <p><strong>Duración aproximada:</strong> 2-3 horas</p>
+                </div>
+              </div>
+              
+              <div class="activity-item mb-6">
+                <h4 class="font-medium mb-2">Visita a las Cuevas de Valporquero</h4>
+                <p class="text-sm">Espectacular conjunto de formaciones kársticas con visitas guiadas.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Distancia desde Cubillas:</strong> 35km</p>
+                  <p><strong>Duración aproximada:</strong> 1-2 horas</p>
+                  <p><strong>Precio:</strong> 10€ adultos / 7€ niños</p>
+                </div>
+              </div>
+              
+              <div class="activity-item">
+                <h4 class="font-medium mb-2">Valle de Arbas</h4>
+                <p class="text-sm">Recorre los diferentes pueblos del valle y disfruta de sus paisajes de alta montaña.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Ruta circular:</strong> Cubillas - Casares - Viadangos - Cubillas</p>
+                  <p><strong>Duración aproximada:</strong> 3-4 horas (en coche con paradas)</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Cultura -->
+            <div class="activity-section">
+              <h3 class="text-xl font-semibold mb-4 text-[#e49a69]">Cultura</h3>
+              
+              <div class="activity-item mb-6">
+                <h4 class="font-medium mb-2">León capital</h4>
+                <p class="text-sm">Visita la Catedral, la Basílica de San Isidoro, el Barrio Húmedo y disfruta de la gastronomía.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Distancia desde Cubillas:</strong> 60km</p>
+                  <p><strong>Duración recomendada:</strong> Día completo</p>
+                </div>
+              </div>
+              
+              <div class="activity-item mb-6">
+                <h4 class="font-medium mb-2">Museo de la Minería (El Entrego)</h4>
+                <p class="text-sm">Conoce la historia minera de la zona con una visita a este completo museo que incluye una mina simulada.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Distancia desde Cubillas:</strong> 50km</p>
+                  <p><strong>Duración aproximada:</strong> 2-3 horas</p>
+                  <p><strong>Precio:</strong> 8€ adultos / 5€ niños</p>
+                </div>
+              </div>
+              
+              <div class="activity-item">
+                <h4 class="font-medium mb-2">Arquitectura tradicional</h4>
+                <p class="text-sm">Recorre los pueblos de Casares, Viadangos y Rodiezmo para admirar las construcciones tradicionales de la montaña leonesa.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Distancia máxima:</strong> 15km</p>
+                  <p><strong>Duración aproximada:</strong> Medio día</p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Actividades -->
+            <div class="activity-section">
+              <h3 class="text-xl font-semibold mb-4 text-[#e49a69]">Otras actividades</h3>
+              
+              <div class="activity-item mb-6">
+                <h4 class="font-medium mb-2">Estación de Esquí San Isidro</h4>
+                <p class="text-sm">Aunque en mayo no habrá nieve, puedes visitar la estación y hacer alguna de sus rutas de verano.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Distancia desde Cubillas:</strong> 45km</p>
+                  <p><strong>Duración aproximada:</strong> Medio día</p>
+                </div>
+              </div>
+              
+              <div class="activity-item mb-6">
+                <h4 class="font-medium mb-2">Ruta en BTT por el valle</h4>
+                <p class="text-sm">Existe una red de caminos ideales para recorrer en bicicleta de montaña, con diferentes niveles de dificultad.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Rutas disponibles:</strong> Fácil (10km), Media (20km), Difícil (35km)</p>
+                  <p><strong>Alquiler de bicis:</strong> Disponible en Villamanín</p>
+                </div>
+              </div>
+              
+              <div class="activity-item">
+                <h4 class="font-medium mb-2">Mercado tradicional de Villamanín</h4>
+                <p class="text-sm">Si coincide tu visita en domingo, no te pierdas el mercado tradicional donde encontrarás productos locales.</p>
+                <div class="mt-2 text-xs text-gray-600">
+                  <p><strong>Distancia desde Cubillas:</strong> 15km</p>
+                  <p><strong>Horario:</strong> Domingos de 9:00 a 14:00</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="activity-note p-4 mt-8 border-l-4 border-[#e49a69] bg-orange-50">
+            <p class="text-sm">
+              <strong>Recomendación:</strong> En la oficina de turismo de Villamanín podrás encontrar más información sobre todas estas actividades y otras propuestas para tu visita.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <CallToAction text="¿Ya estás inscrito? Prepara tu visita"/>
+    </article>
+  </section>
+
+  <style>
+    .info-tag {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background-color: #fef3c7;
+      color: #92400e;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+
+    @media (max-width: 480px) {
+      .info-tag {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</BasePageLayout>
