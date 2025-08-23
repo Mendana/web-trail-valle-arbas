@@ -2,11 +2,18 @@
 import BaseHead from '../components/BaseHead.astro';
 import VideoHeader from '../components/VideoHeader.astro';
 import StickyMenu from '../components/StickyMenu.astro';
-import SimpleCarousel from '../components/SimpleCarousel.astro';
+import Carousel from '../components/Carousel.astro';
 import InfoSection from '../components/sections/InfoSection.astro';
 import MainFooter from '../components/MainFooter.astro';
 
 const { title, description } = Astro.props;
+
+//Images
+import carousel1 from '../assets/imgCarruselMainPage/carrusel1.jpg';
+import carousel2 from '../assets/imgCarruselMainPage/carrusel2.jpg';
+import carousel3 from '../assets/imgCarruselMainPage/carrusel3.jpg';
+import carousel4 from '../assets/imgCarruselMainPage/carrusel4.jpg';
+import carousel5 from '../assets/imgCarruselMainPage/carrusel5.jpg';
 ---
 
 <html lang="es">
@@ -29,7 +36,15 @@ const { title, description } = Astro.props;
         en las fotos se trata de un valle que no deja indiferente a nadie.
       </p>
 
-      <SimpleCarousel />
+      <Carousel
+        images={[
+          { src: carousel1, alt: "Imagen de subida al Palero", caption: "Subida al Palero" },
+          { src: carousel2, alt: "Imagen de la llegada al Palero", caption: "Collado de la llegada al Palero" },
+          { src: carousel3, alt: "Imagen de la vista desde la cresta de la Brazosa", caption: "Cresta de la Brazosa"},
+          { src: carousel4, alt: "Imagen de la vista de las tres Marías cubiertas por las nubes", caption: "Las Tres Marías entre nubes"},
+          { src: carousel5, alt: "Imagen del inicio de la carrera", caption: "Salida de la carrera"},
+        ]}
+      />
 
       <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         <InfoSection
@@ -92,6 +107,12 @@ const { title, description } = Astro.props;
         El Trail Valle de Arbas es una experiencia única que combina deporte, naturaleza y
         comunidad. ¡Te esperamos el 10 de Mayo para disfrutar juntos de este evento inolvidable!
       </p>
+
+      <h2 class="text-3xl font-bold text-center mt-16 mb-4">Nuestros patrocinadores</h2>
+      <p class="text-center text-base mb-8 w-[90%] mx-auto">
+        Agradecemos a nuestros patrocinadores por su apoyo en la realización de este evento. Esta carrera no sería posible sin ellos.
+      </p>
+      <p class="text-red-600">Añadir imágenes o lo que sea</p>
     </main>
     <footer>
       <MainFooter />

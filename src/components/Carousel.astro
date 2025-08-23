@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 const { images } = Astro.props; // Array de objetos { src, alt, caption }
 ---
-<div class="carousel-container max-w-[1200px]">
+<div class="carousel-container max-w-[1200px] mx-auto">
   <div class="carousel-viewport mt-2" id="carousel-viewport">
     <div class="carousel-track" id="carousel-track">
       {images.map((img, i) => (
@@ -29,7 +29,7 @@ const { images } = Astro.props; // Array de objetos { src, alt, caption }
 <style>
   .carousel-container {
     position: relative;
-    width: 100%;
+    width: 90%;
     max-width: 900px;
     margin: 0 auto;
     overflow: hidden;
