@@ -1,0 +1,41 @@
+---
+interface Props {
+  title: string;
+  className?: string;
+}
+
+const { title, className = "" } = Astro.props;
+---
+
+<div class={`access-section ${className}`}>
+  <h3 class="text-xl font-semibold mt-4 mb-4 lg:text-2xl">{title}</h3>
+  <slot />
+</div>
+
+<style>
+  .access-section h3 {
+    color: #444;
+  }
+  
+  @media (max-width: 640px) {
+    .access-section h3 {
+      font-size: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .access-section h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.75rem;
+    }
+    
+    .access-section :global(ul) {
+      padding-left: 1.25rem;
+    }
+    
+    .access-section :global(li) {
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+  }
+</style>

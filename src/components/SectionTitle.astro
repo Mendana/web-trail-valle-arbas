@@ -8,14 +8,14 @@ interface Props {
 const { title, subtitle, className = "" } = Astro.props;
 ---
 
-<div class={`title-center pt-4 ${className} flex flex-col items-center`}>
+<div class={`title-center pt-4 ${className} flex flex-col items-center mx-auto max-w-[1200px]`}>
   <h2 class="text-2xl md:text-2xl sm:text-xl font-bold title-underline mt-8 mb-4">{title}</h2>
   {subtitle && (
-    <p class="info-text w-[90%] text-center max-w-[1200px] text-base md:text-lg">
-      {subtitle}
+    <p class="info-text text-center max-w-[1200px] text-base md:text-lg" set:html={subtitle}>
     </p>
   )}
 </div>
+
 
 <style>
   @media (max-width: 480px) {
@@ -24,7 +24,7 @@ const { title, subtitle, className = "" } = Astro.props;
     }
     
     .title-center .info-text {
-      width: 95%;
+      width: 90%;
       font-size: 0.9rem;
     }
   }
