@@ -1,0 +1,118 @@
+---
+interface EditionData {
+  year: string;
+  edition: string;
+  title: string;
+  description: string;
+  results: {
+    name: string;
+    time: string;
+    highlight?: boolean;
+  }[];
+}
+
+interface Props {
+  editionData: EditionData;
+}
+
+const { editionData } = Astro.props;
+---
+
+<div class="timeline-item">
+  <div class="year">{editionData.year}</div>
+  <div class="timeline-content">
+    <h3 class="text-lg font-semibold text-[#e49a69]">{editionData.title}</h3>
+    <p class="mb-2">{editionData.description}</p>
+    <div class="flex flex-col gap-1">
+      {editionData.results.map(result => (
+        <p>
+          <strong>{result.name}</strong> {result.time}
+          {result.highlight && <span> 🏆</span>}
+        </p>
+      ))}
+    </div>
+    <div class="mt-4 flex gap-3">
+      <a href="#" class="archive-link">Resultados</a>
+      <a href="#" class="archive-link">Fotos</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .timeline-item {
+    position: relative;
+    display: flex;
+    margin-bottom: 2rem;
+    padding-left: 6rem;
+  }
+  
+  .year {
+    position: absolute;
+    left: 0;
+    width: 6rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e49a69;
+    color: white;
+    border-radius: 1.25rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    z-index: 1;
+  }
+  
+  .timeline-content {
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    flex: 1;
+  }
+  
+  .archive-link {
+    display: inline-block;
+    color: #e49a69;
+    font-weight: 500;
+    padding: 0.25rem 0.75rem;
+    border: 1px solid #e49a69;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+  }
+  
+  .archive-link:hover {
+    background-color: #e49a69;
+    color: white;
+  }
+  
+  @media (max-width: 640px) {
+    .timeline-item {
+      padding-left: 0;
+      padding-top: 3rem;
+    }
+    
+    .year {
+      top: 0;
+      left: 1rem;
+      transform: translateX(-50%);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .timeline-content {
+      padding: 1.25rem;
+    }
+    
+    .mt-4.flex.gap-3 {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .archive-link {
+      display: block;
+      text-align: center;
+      padding: 0.5rem;
+    }
+  }
+</style>

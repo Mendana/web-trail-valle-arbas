@@ -4,10 +4,14 @@ const { imgName, title } = Astro.props as { imgName: keyof typeof images; title:
 
 import HeaderCategorias from '../assets/imgHeaders/HeaderCategorias.jpg';
 import HeaderInscripcion from '../assets/imgHeaders/HeaderInscripcion.jpg';
+import HeaderNormativa from '../assets/imgHeaders/HeaderNormativa.jpg';
+import HeaderUbicaciones from '../assets/imgHeaders/HeaderUbicaciones.jpg';
 
 const images = {
   HeaderCategorias,
   HeaderInscripcion,
+  HeaderNormativa,
+  HeaderUbicaciones
 };
 
 const mainImage = images[imgName];

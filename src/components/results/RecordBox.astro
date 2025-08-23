@@ -1,0 +1,51 @@
+---
+interface RecordData {
+  name: string;
+  time: string;
+  year: string;
+}
+
+interface Props {
+  maleRecord: RecordData;
+  femaleRecord: RecordData;
+}
+
+const { maleRecord, femaleRecord } = Astro.props;
+---
+
+<div class="record-box mt-6">
+  <h4 class="text-base font-medium">Récord del recorrido</h4>
+  <div class="record-item">
+    <p class="record-detail"><span class="record-category">Masculino:</span> {maleRecord.name} - {maleRecord.time} ({maleRecord.year})</p>
+    <p class="record-detail"><span class="record-category">Femenino:</span> {femaleRecord.name} - {femaleRecord.time} ({femaleRecord.year})</p>
+  </div>
+</div>
+
+<style>
+  .record-box {
+    background-color: rgba(228, 154, 105, 0.1);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-left: 3px solid #e49a69;
+  }
+  
+  .record-category {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 480px) {
+    .record-box {
+      padding: 0.75rem;
+    }
+    
+    .record-detail {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 0.5rem;
+    }
+    
+    .record-category {
+      margin-bottom: 0.25rem;
+    }
+  }
+</style>

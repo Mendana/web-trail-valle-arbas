@@ -1,0 +1,25 @@
+---
+interface Props {
+  categoryName: string;
+}
+
+const { categoryName } = Astro.props;
+---
+
+<div class="category-results">
+  <h4 class="text-lg font-medium mb-3">{categoryName}</h4>
+  <ol class="results-list">
+    <slot />
+  </ol>
+</div>
+
+<style>
+  .category-results + .category-results {
+    margin-top: 1.5rem;
+  }
+  
+  .results-list {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+  }
+</style>

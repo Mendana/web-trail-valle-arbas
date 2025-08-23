@@ -1,0 +1,30 @@
+---
+interface Props {
+  url?: string;
+}
+
+const { url = "#" } = Astro.props;
+---
+
+<div class="mt-6 text-center">
+  <a href={url} class="results-link">
+    Ver clasificación completa
+  </a>
+</div>
+
+<style>
+  .results-link {
+    display: inline-block;
+    color: #e49a69;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 1px solid #e49a69;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+  }
+  
+  .results-link:hover {
+    background-color: #e49a69;
+    color: white;
+  }
+</style>

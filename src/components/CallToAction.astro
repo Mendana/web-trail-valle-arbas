@@ -1,0 +1,15 @@
+---
+interface Props {
+  url?: string;
+  text: string;
+  customClass?: string;
+}
+
+const { url = "/inscripcion", text, customClass = "" } = Astro.props;
+---
+
+<div class={`flex justify-center mt-10 ${customClass}`}>
+  <a href={url} class="inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+    {text}
+  </a>
+</div>

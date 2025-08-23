@@ -1,0 +1,118 @@
+.past-edition-card {
+  background-color: rgba(250, 250, 250, 0.8);
+  border-radius: 0.75rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border-top: 4px solid #e49a69;
+}
+
+.year-banner {
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background: #e49a69;
+  color: white;
+  padding: 0.25rem 2rem;
+  transform: rotate(45deg);
+  font-weight: bold;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.trophy {
+  display: inline-block;
+  width: 1.5rem;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.past-edition-links {
+  margin-top: 1rem;
+}
+
+.past-edition-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border: 1px solid #e49a69;
+  border-radius: 0.5rem;
+  color: #e49a69;
+  font-weight: 500;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.past-edition-link:hover {
+  background-color: #e49a69;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(228, 154, 105, 0.2);
+}
+
+.gallery-album, .gallery-social {
+  padding: 1.5rem;
+}
+
+.winners ul {
+  padding-left: 0 !important;
+  list-style-type: none !important;
+}
+
+.winners li {
+  padding-left: 0 !important;
+  margin-bottom: 0.5rem;
+}
+
+.winners li::before {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .year-banner {
+    transform: rotate(45deg) scale(0.9);
+    right: -35px;
+  }
+
+  .past-edition-card {
+    padding: 1.25rem;
+  }
+
+  .winners ul {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .past-edition-links {
+    grid-template-columns: 1fr;
+  }
+  
+  .past-edition-link {
+    padding: 0.75rem;
+    justify-content: center;
+  }
+
+  .winners li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 1.5rem !important;
+    position: relative;
+  }
+
+  .winners .trophy {
+    position: absolute;
+    left: 0;
+    top: 2px;
+  }
+}
+
+@media (max-width: 380px) {
+  .year-banner {
+    transform: rotate(45deg) scale(0.8);
+    right: -40px;
+    top: 5px;
+  }
+}

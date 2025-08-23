@@ -1,0 +1,31 @@
+---
+interface Props {
+  title: string;
+  subtitle?: string;
+  className?: string;
+}
+
+const { title, subtitle, className = "" } = Astro.props;
+---
+
+<div class={`title-center pt-4 ${className} flex flex-col items-center`}>
+  <h2 class="text-2xl md:text-2xl sm:text-xl font-bold title-underline mt-8 mb-4">{title}</h2>
+  {subtitle && (
+    <p class="info-text w-[90%] text-center max-w-[1200px] text-base md:text-lg">
+      {subtitle}
+    </p>
+  )}
+</div>
+
+<style>
+  @media (max-width: 480px) {
+    .title-center h2 {
+      font-size: 1.25rem;
+    }
+    
+    .title-center .info-text {
+      width: 95%;
+      font-size: 0.9rem;
+    }
+  }
+</style>

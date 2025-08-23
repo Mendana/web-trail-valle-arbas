@@ -1,0 +1,34 @@
+---
+interface Props {
+  containerClass?: string;
+}
+
+const { containerClass = "mb-20" } = Astro.props;
+---
+
+<div class="timeline {containerClass}">
+  <slot />
+</div>
+
+<style>
+  .timeline {
+    position: relative;
+    padding: 2rem 0;
+  }
+  
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 3rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #e49a69, rgba(228, 154, 105, 0.2));
+  }
+  
+  @media (max-width: 640px) {
+    .timeline::before {
+      left: 1rem;
+    }
+  }
+</style>

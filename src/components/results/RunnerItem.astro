@@ -1,0 +1,89 @@
+---
+interface Props {
+  position: number;
+  name: string;
+  time: string;
+}
+
+const { position, name, time } = Astro.props;
+---
+
+<li>
+  <span class="position">{position}</span>
+  <span class="runner-name">{name}</span>
+  <span class="runner-time">{time}</span>
+</li>
+
+<style>
+  li {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(228, 154, 105, 0.2);
+    position: relative;
+    padding-left: 0 !important;
+  }
+  
+  li::before {
+    display: none;
+  }
+  
+  li:last-child {
+    border-bottom: none;
+  }
+  
+  .position {
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e49a69;
+    color: white;
+    border-radius: 50%;
+    margin-right: 1rem;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  
+  .runner-name {
+    flex: 1;
+  }
+  
+  .runner-time {
+    font-weight: 600;
+    color: #555;
+  }
+  
+  @media (max-width: 640px) {
+    .runner-name, .runner-time {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 380px) {
+    li {
+      flex-wrap: wrap;
+      padding: 0.8rem 0;
+      gap: 0.5rem;
+    }
+    
+    .position {
+      width: 1.5rem;
+      height: 1.5rem;
+      font-size: 0.8rem;
+      margin-right: 0.5rem;
+    }
+    
+    .runner-name {
+      flex-basis: calc(100% - 2rem);
+      font-weight: 500;
+    }
+    
+    .runner-time {
+      margin-left: 2rem;
+      width: 100%;
+      font-size: 0.8rem;
+    }
+  }
+</style>
