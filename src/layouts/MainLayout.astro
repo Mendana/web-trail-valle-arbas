@@ -7,6 +7,7 @@ import InfoSection from '../components/sections/InfoSection.astro';
 import MainFooter from '../components/MainFooter.astro';
 import SponsorGrid from '../components/sponsors/SponsorGrid.astro';
 import SectionTitle from '../components/SectionTitle.astro';
+import NewsSection from '../components/news/NewsSection.astro';
 
 const { title, description } = Astro.props;
 
@@ -182,6 +183,8 @@ const sponsors: Sponsor[] = [
           comunidad. ¡Te esperamos el 10 de Mayo para disfrutar juntos de este evento inolvidable!
         </p>
       </div>
+      
+      <NewsSection className="py-16 bg-gray-50" />
       
       <section id="sponsors" class="sponsors-section py-16 mt-8 bg-gradient-to-b from-white to-gray-50">
         

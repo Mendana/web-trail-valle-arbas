@@ -1,0 +1,83 @@
+---
+import '../styles/global.css';
+import BasePageLayout from '../layouts/BasePageLayout.astro';
+import { getCollection } from 'astro:content';
+import NewsCard from '../components/news/NewsCard.astro';
+
+// Obtener todas las noticias no marcadas como borrador
+const allNews = await getCollection('noticias', ({ data }) => {
+  return !data.draft;
+});
+
+// Ordenar por fecha de publicación (más recientes primero)
+const sortedNews = allNews.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+// Primero las destacadas
+const orderedNews = [
+  ...sortedNews.filter(post => post.data.featured),
+  ...sortedNews.filter(post => !post.data.featured)
+];
+---
+
+<BasePageLayout
+  title="Noticias | Trail Valle de Arbas"
+  description="Últimas noticias y actualizaciones sobre el Trail Valle de Arbas"
+  image="HeaderUbicaciones"
+  imgTitle="Noticias"
+>
+  <section class="py-12 px-4">
+    <div class="max-w-[1200px] mx-auto">
+      <h1 class="text-4xl font-bold text-center mb-3">Noticias y Actualidad</h1>
+      <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        Mantente al día con las últimas novedades sobre el Trail Valle de Arbas, cambios en los recorridos, consejos de entrenamiento y mucho más.
+      </p>
+      
+      <div class="news-archive-grid">
+        {orderedNews.map((news) => (
+          <NewsCard
+            title={news.data.title}
+            description={news.data.description}
+            image={news.data.image}
+            imageAlt={news.data.imageAlt}
+            date={news.data.pubDate}
+            url={`/noticias/${news.slug}`}
+            featured={news.data.featured}
+          />
+        ))}
+      </div>
+      
+      {orderedNews.length === 0 && (
+        <div class="text-center py-20">
+          <p class="text-lg text-gray-600">No hay noticias publicadas actualmente.</p>
+        </div>
+      )}
+    </div>
+  </section>
+</BasePageLayout>
+
+<style>
+  .news-archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Hacer que los elementos destacados ocupen 2 columnas en pantallas grandes */
+  @media (min-width: 1024px) {
+    .news-archive-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .news-archive-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .news-archive-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

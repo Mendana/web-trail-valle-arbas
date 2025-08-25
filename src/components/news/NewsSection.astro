@@ -1,0 +1,106 @@
+---
+import { getCollection } from 'astro:content';
+import NewsCard from './NewsCard.astro';
+import SectionTitle from '../SectionTitle.astro';
+
+// Props
+interface Props {
+  count?: number;
+  showFeatured?: boolean;
+  className?: string;
+}
+
+const { count = 3, showFeatured = true, className = '' } = Astro.props;
+
+// Obtener todas las noticias publicadas, ordenadas por fecha (más reciente primero)
+const allNews = await getCollection('noticias', ({ data }) => {
+  return !data.draft;
+});
+
+// Ordenar por fecha de publicación (más recientes primero)
+const sortedNews = allNews.sort((a, b) => b.data.pubDate.getTime() - a.data.pubDate.getTime());
+
+// Separar destacadas de no destacadas
+const featuredNews = showFeatured 
+  ? sortedNews.filter(post => post.data.featured)
+  : [];
+
+// Si hay destacadas, mostrarlas primero y completar con no destacadas hasta el límite
+const newsToShow: typeof allNews = [];
+if (featuredNews.length > 0) {
+  // Primero añadimos las destacadas
+  newsToShow.push(...featuredNews);
+  
+  // Luego añadimos las no destacadas hasta completar el límite
+  const nonFeatured = sortedNews.filter(post => !post.data.featured);
+  const remainingCount = count - featuredNews.length;
+  
+  if (remainingCount > 0) {
+    newsToShow.push(...nonFeatured.slice(0, remainingCount));
+  }
+} else {
+  // Si no hay destacadas o no se muestran, simplemente tomamos las más recientes
+  newsToShow.push(...sortedNews.slice(0, count));
+}
+---
+
+<section class={`news-section ${className}`}>
+  <SectionTitle
+    title="Últimas noticias"
+    subtitle="Mantente informado sobre las novedades relacionadas con el Trail Valle de Arbas"
+    className="mb-12 reveal-element"
+  />
+  
+  <div class="news-grid">
+    {newsToShow.map((news) => (
+      <NewsCard
+        title={news.data.title}
+        description={news.data.description}
+        image={news.data.image}
+        imageAlt={news.data.imageAlt}
+        date={news.data.pubDate}
+        url={`/noticias/${news.slug}`}
+        featured={news.data.featured}
+      />
+    ))}
+  </div>
+  
+  <div class="text-center mt-12">
+    <a href="/noticias" class="btn-animated inline-block px-8 py-3 bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold rounded-lg transition-all hover:shadow-lg hover:-translate-y-1 hover:from-[#e49a69] hover:to-[#f97316]">
+      Ver todas las noticias
+    </a>
+  </div>
+</section>
+
+<style>
+  .news-section {
+    padding: 2rem 0;
+  }
+
+  .news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 768px) {
+    .news-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .news-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .news-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
