@@ -2,7 +2,7 @@
 title: Cambios en el recorrido para la edición 2025
 description: Descubre las novedades en el trazado del Trail Valle de Arbas 2025, con nuevas zonas y tramos renovados para una experiencia mejorada.
 pubDate: 2025-02-10
-image: /images/noticias/nuevo-recorrido.jpg
+image: /images/noticias/noticia1.jpg
 imageAlt: Vista panorámica del nuevo tramo por la Cresta de la Brazosa
 author: Equipo Técnico Trail Valle de Arbas
 ---

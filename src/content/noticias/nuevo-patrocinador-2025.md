@@ -2,7 +2,7 @@
 title: Nuevo patrocinador principal para la edición 2025
 description: Anunciamos la incorporación de Deportes Montaña Norte como patrocinador principal del Trail Valle de Arbas 2025.
 pubDate: 2025-03-05
-image: /images/noticias/nuevo-patrocinador.jpg
+image: /images/noticias/noticia3.jpg
 imageAlt: Firma del acuerdo con Deportes Montaña Norte
 author: Organización Trail Valle de Arbas
 ---

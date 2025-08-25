@@ -2,7 +2,7 @@
 title: Abierto el plazo de inscripción para la edición 2025
 description: Ya puedes inscribirte para participar en la tercera edición del Trail Valle de Arbas que se celebrará el 10 de mayo de 2025.
 pubDate: 2025-01-15
-image: /images/noticias/inscripciones-abiertas.jpg
+image: /images/noticias/noticia2.jpg
 imageAlt: Corredores en la línea de salida de la edición anterior
 author: Organización Trail Valle de Arbas
 featured: true
