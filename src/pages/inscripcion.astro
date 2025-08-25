@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import BasePageLayout from '../layouts/BasePageLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
 ---
 
 <BasePageLayout
@@ -10,9 +11,10 @@ import BasePageLayout from '../layouts/BasePageLayout.astro';
   imgTitle="Inscripciones"
 >
   <section class="section-card">
-    <div class="title-center pt-4">
-      <h2 class="text-2xl font-bold title-underline mt-8 mb-4">Cómo inscribirse</h2>
-    </div>
+    <SectionTitle
+      title="Cómo inscribirse"
+      subtitle=""
+    />
     <p class="info-text mb-4 text-center">
       Las inscripciones se realizan a través de la <a
         href="https://www.trailvalledearbas.com"
@@ -30,9 +32,10 @@ import BasePageLayout from '../layouts/BasePageLayout.astro';
     </div>
   </section>
   <section class="section-card">
-    <div class="title-center pt-4">
-      <h2 class="text-2xl font-bold title-underline mt-8 mb-4">Precios</h2>
-    </div>
+    <SectionTitle
+      title="Precios de inscripción"
+      subtitle=""
+    />
     <p class="info-text mb-2 text-center">
       Los precios de las inscripciones para los deportistas <strong>federados</strong> son los siguientes:
     </p>
@@ -47,9 +50,10 @@ import BasePageLayout from '../layouts/BasePageLayout.astro';
     </p>
   </section>
   <section class="section-card">
-    <div class="title-center pt-4">
-      <h2 class="text-2xl font-bold title-underline mt-8 mb-4">Qué incluye la inscripción</h2>
-    </div>
+    <SectionTitle
+      title="Qué incluye la inscripción"
+      subtitle=""
+    />
     <p class="info-text text-center">
       Con la inscripción se entregará la bolsa del corredor, que incluirá la camiseta oficial de la
       carrera y una selección de productos locales. Además, todos los participantes que finalicen el

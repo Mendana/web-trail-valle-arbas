@@ -6,6 +6,7 @@ import Carousel from '../components/Carousel.astro';
 import InfoSection from '../components/sections/InfoSection.astro';
 import MainFooter from '../components/MainFooter.astro';
 import SponsorGrid from '../components/sponsors/SponsorGrid.astro';
+import SectionTitle from '../components/SectionTitle.astro';
 
 const { title, description } = Astro.props;
 
@@ -95,24 +96,28 @@ const sponsors: Sponsor[] = [
       title="Trail Valle de Arbas 2025"
     />
     <main class="max-w-[1200px] mx-auto">
-      <h2 class="text-3xl font-bold text-center mt-10 mb-4">
-        Descubre el <span class="text-gradient">Valle de Arbas</span>
-      </h2>
-      <p class="text-center text-base mb-8 w-[90%] mx-auto">
-        Bienvenido al Valle de Arbas, donde el 10 de Mayo se celebrará la tercera edición de la
-        carrera <span class="text-gradient font-bold">TRAIL VALLE DE ARBAS</span>. Como puedes ver
-        en las fotos se trata de un valle que no deja indiferente a nadie.
-      </p>
+      <div class="fade-in-up">
+        <h2 class="text-3xl font-bold text-center mt-10 mb-4 animate-title">
+          Descubre el <span class="text-gradient">Valle de Arbas</span>
+        </h2>
+        <p class="text-center text-base mb-8 w-[90%] mx-auto animate-text">
+          Bienvenido al Valle de Arbas, donde el 10 de Mayo se celebrará la tercera edición de la
+          carrera <span class="text-gradient font-bold">TRAIL VALLE DE ARBAS</span>. Como puedes ver
+          en las fotos se trata de un valle que no deja indiferente a nadie.
+        </p>
+      </div>
 
-      <Carousel
-        images={[
-          { src: carousel1, alt: "Imagen de subida al Palero", caption: "Subida al Palero" },
-          { src: carousel2, alt: "Imagen de la llegada al Palero", caption: "Collado de la llegada al Palero" },
-          { src: carousel3, alt: "Imagen de la vista desde la cresta de la Brazosa", caption: "Cresta de la Brazosa"},
-          { src: carousel4, alt: "Imagen de la vista de las tres Marías cubiertas por las nubes", caption: "Las Tres Marías entre nubes"},
-          { src: carousel5, alt: "Imagen del inicio de la carrera", caption: "Salida de la carrera"},
-        ]}
-      />
+      <div class="reveal-element">
+        <Carousel
+          images={[
+            { src: carousel1, alt: "Imagen de subida al Palero", caption: "Subida al Palero" },
+            { src: carousel2, alt: "Imagen de la llegada al Palero", caption: "Collado de la llegada al Palero" },
+            { src: carousel3, alt: "Imagen de la vista desde la cresta de la Brazosa", caption: "Cresta de la Brazosa"},
+            { src: carousel4, alt: "Imagen de la vista de las tres Marías cubiertas por las nubes", caption: "Las Tres Marías entre nubes"},
+            { src: carousel5, alt: "Imagen del inicio de la carrera", caption: "Salida de la carrera"},
+          ]}
+        />
+      </div>
 
       <section class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
         <InfoSection
@@ -170,37 +175,66 @@ const sponsors: Sponsor[] = [
         />
       </section>
 
-      <h2 class="text-3xl font-bold text-center mt-10 mb-4">¡No te lo pierdas!</h2>
-      <p class="text-center text-base mb-8 w-[90%] mx-auto">
-        El Trail Valle de Arbas es una experiencia única que combina deporte, naturaleza y
-        comunidad. ¡Te esperamos el 10 de Mayo para disfrutar juntos de este evento inolvidable!
-      </p>
-
+      <div class="fade-in-up delayed-animation">
+        <h2 class="text-3xl font-bold text-center mt-10 mb-4 pulse-animation">¡No te lo pierdas!</h2>
+        <p class="text-center text-base mb-8 w-[90%] mx-auto">
+          El Trail Valle de Arbas es una experiencia única que combina deporte, naturaleza y
+          comunidad. ¡Te esperamos el 10 de Mayo para disfrutar juntos de este evento inolvidable!
+        </p>
+      </div>
+      
       <section id="sponsors" class="sponsors-section py-16 mt-8 bg-gradient-to-b from-white to-gray-50">
-        <div class="sponsor-header text-center mb-12">
-          <h2 class="text-3xl font-bold mb-4">Nuestros patrocinadores</h2>
-          <div class="w-24 h-1 bg-gradient-to-r from-[#f97316] to-[#e49a69] mx-auto mb-6"></div>
-          <p class="text-center text-base mb-4 w-[90%] mx-auto max-w-[800px]">
-            Agradecemos a nuestros patrocinadores por su apoyo en la realización de este evento. Esta carrera no sería posible sin ellos.
-          </p>
+        
+        <SectionTitle title="Nuestros patrocinadores" subtitle="Agradecemos a nuestros patrocinadores por su apoyo en la realización de este evento. Esta carrera no sería posible sin ellos." className="mb-12 reveal-element" />
+
+        <div class="sponsor-grid-container reveal-element">
+          <SponsorGrid sponsors={sponsors} />
         </div>
-        
-        <SponsorGrid sponsors={sponsors} />
-        
-        <div class="become-sponsor text-center mt-16 bg-white py-10 px-6 rounded-lg shadow-sm max-w-[900px] mx-auto">
+        <div class="become-sponsor text-center mt-16 bg-white py-10 px-6 rounded-lg shadow-sm max-w-[900px] mx-auto reveal-element">
           <h3 class="text-2xl font-semibold mb-4">¿Te gustaría ser patrocinador?</h3>
           <p class="text-base w-[90%] mx-auto max-w-[600px] mb-6">
             Si tu empresa está interesada en patrocinar el Trail Valle de Arbas, no dudes en contactarnos. Tenemos diferentes opciones de patrocinio adaptadas a tus necesidades.
           </p>
-          <a href="/contacto" class="inline-block px-8 py-3 bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold rounded-lg transition-all hover:shadow-lg hover:-translate-y-1 hover:from-[#e49a69] hover:to-[#f97316]">
+          <a href="/contacto" class="btn-animated inline-block px-8 py-3 bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold rounded-lg transition-all hover:shadow-lg hover:-translate-y-1 hover:from-[#e49a69] hover:to-[#f97316]">
             Contacta con nosotros
           </a>
         </div>
       </section>
     </main>
+    <div class="page-transition"></div>
     <footer>
       <MainFooter />
     </footer>
+
+    <script>
+      import { 
+        initScrollAnimations, 
+        initButtonEffects, 
+        initPageTransitions, 
+        initHoverEffects, 
+        initTextAnimations,
+        initCounterAnimations,
+        initUnderlineAnimations
+      } from '../scripts/animations.js';
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        // Marcar que JavaScript está habilitado
+        document.body.classList.add('js-enabled');
+        
+        // Inicializar todas las animaciones
+        try {
+          initPageTransitions();
+          initScrollAnimations();
+          initButtonEffects();
+          initHoverEffects();
+          initTextAnimations();
+          initCounterAnimations();
+          initUnderlineAnimations();
+        } catch (error) {
+          console.error('Error al inicializar animaciones:', error);
+        }
+      });
+    </script>
   </body>
 </html>
 
@@ -210,6 +244,7 @@ const sponsors: Sponsor[] = [
     top: 0;
     z-index: 50;
   }
+  
   .text-gradient {
     background: linear-gradient(270deg, #f96742, #e49a69, #f96742);
     background-size: 400% 400%;
@@ -217,7 +252,108 @@ const sponsors: Sponsor[] = [
     -webkit-text-fill-color: transparent;
     animation: gradient-move 6s linear infinite;
   }
+  
+  /* Animación de entrada desde abajo */
+  .fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease forwards;
+  }
+  
+  .delayed-animation {
+    animation-delay: 0.3s;
+  }
+  
+  /* Animación de título */
+  .animate-title {
+    animation: fadeIn 0.8s ease-out forwards, scaleIn 0.8s ease-out forwards;
+  }
+  
+  .animate-text {
+    animation: fadeIn 1s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+  
+  /* Animación de revelación en scroll */
+  .reveal-element {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  .reveal-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+/* Elementos dentro de secciones con scroll-reveal */
+.scroll-reveal-section > * {
+  opacity: 1; /* Por defecto visible */
+  transform: none; /* Por defecto sin transformación */
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
+/* Solo aplicar estas propiedades si el JavaScript está funcionando */
+.js-enabled .scroll-reveal-section > * {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.scroll-reveal-section > *.visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}  /* Efecto pulsante para llamadas a la acción */
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Animación para botones */
+  .btn-animated {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-animated:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: all 0.6s;
+  }
+  
+  .btn-animated:hover:before {
+    left: 100%;
+  }
+  
+  /* Animación de línea deslizante */
+  .slide-in-animation {
+    width: 0;
+    animation: slideWidth 1.2s ease-out 0.3s forwards;
+  }
+  
+  /* Transición entre páginas */
+  .page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    opacity: 1;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+  }
+  
+  .page-transition.loaded {
+    opacity: 0;
+  }
+  
+  /* Keyframes para animaciones */
   @keyframes gradient-move {
     0% {
       background-position: 0% 50%;
@@ -225,5 +361,37 @@ const sponsors: Sponsor[] = [
     100% {
       background-position: 200% 50%;
     }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes scaleIn {
+    from { transform: scale(0.95); }
+    to { transform: scale(1); }
+  }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes slideWidth {
+    from { width: 0; }
+    to { width: 6rem; }
   }
 </style>

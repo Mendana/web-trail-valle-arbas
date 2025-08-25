@@ -3,9 +3,10 @@ interface Props {
   title: string;
   description: string[];
   mapUrl: string;
+  className?: string;
 }
 
-const { title, description, mapUrl } = Astro.props;
+const { title, description, mapUrl, className = "" } = Astro.props;
 ---
 
 <div class="location-card">

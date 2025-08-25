@@ -4,6 +4,7 @@ import ImageHeader from "../components/ImageHeader.astro";
 import BaseHead from '../components/BaseHead.astro';
 import StickyMenu from '../components/StickyMenu.astro';
 import MainFooter from '../components/MainFooter.astro';
+import '../styles/global.css';
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -14,9 +15,38 @@ import MainFooter from '../components/MainFooter.astro';
     <main>
       <slot />
     </main>
+    <div class="page-transition"></div>
     <footer>
-        <MainFooter/>
+      <MainFooter/>
     </footer>
+    
+    <script>
+      import { 
+        initScrollAnimations, 
+        initButtonEffects, 
+        initPageTransitions, 
+        initHoverEffects, 
+        initTextAnimations,
+        initUnderlineAnimations
+      } from '../scripts/animations.js';
+      
+      document.addEventListener('DOMContentLoaded', () => {
+        // Marcar que JavaScript está habilitado
+        document.body.classList.add('js-enabled');
+        
+        // Inicializar todas las animaciones
+        try {
+          initPageTransitions();
+          initScrollAnimations();
+          initButtonEffects();
+          initHoverEffects();
+          initTextAnimations();
+          initUnderlineAnimations();
+        } catch (error) {
+          console.error('Error al inicializar animaciones:', error);
+        }
+      });
+    </script>
   </body>
 </html>
 <style>

@@ -19,6 +19,7 @@ import luna1 from '../assets/imgCategorias/luna1.png';
 import luna2 from '../assets/imgCategorias/luna2.png';
 import luna3 from '../assets/imgCategorias/luna3.png';
 import luna4 from '../assets/imgCategorias/luna4.png';
+import SectionTitle from '../components/SectionTitle.astro';
 
 
 ---
@@ -30,13 +31,11 @@ import luna4 from '../assets/imgCategorias/luna4.png';
   imgTitle="Categorías y Distancias"
 >
   <section>
-    <div class="title-center pt-4">
-      <h2 class="text-2xl font-bold title-underline mt-8 mb-4">3 Distancias</h2>
-    </div>
-    <p class="info-text w-[90%] text-center max-w-[1200px]">
-      Hemos preparado varias categorías en el trail para que puedas elegir la que más se adapte a
-      ti. Desde 10km hasta 42km, para todos los niveles.
-    </p>
+    <SectionTitle
+      title="3 Distancias"
+      subtitle="Hemos preparado varias categorías en el trail para que puedas elegir la que más se adapte a ti. Desde 10km hasta 42km, para todos los niveles."
+      class="reveal-element"
+    />
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
       <DistanceField
         name="Trail Arbas Infinito"
@@ -87,8 +86,8 @@ import luna4 from '../assets/imgCategorias/luna4.png';
 
   <section>
     <article id="arbas-infinito" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
-      <div class="title-center pt-4">
-        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">
+      <div class="title-center pt-4 reveal-element">
+        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">
           Trail Arbas Infinito
         </h2>
       </div>
@@ -215,8 +214,8 @@ import luna4 from '../assets/imgCategorias/luna4.png';
       </div>
     </article>
     <article id="arbas-luna" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
-      <div class="title-center pt-4">
-        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">Trail Arbas-Luna</h2>
+      <div class="title-center pt-4 reveal-element">
+        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">Trail Arbas-Luna</h2>
       </div>
       <p class="info-text mb-2">
         Esta modalidad está pensada para corredores que prefieren una distancia más corta, rápida y
@@ -295,8 +294,8 @@ import luna4 from '../assets/imgCategorias/luna4.png';
     </article>
     <article id="alceo" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
       <h2 class="text-2xl font-bold text-[#e49a69] text-center">Categorías inferiores</h2>
-      <div class="title-center pt-4 flex flex-col items-center">
-        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 lg:text-3xl">
+      <div class="title-center pt-4 flex flex-col items-center reveal-element">
+        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">
           Trail "Sierra del Alceo"
         </h2>
         <h3 class="text-xl font-semibold text-[#e49a69] mb-4">Categoría cadete</h3>
@@ -371,8 +370,8 @@ import luna4 from '../assets/imgCategorias/luna4.png';
       </div>
     </article>
     <article id="cuencha" class="pt-20 w-[90%] mx-auto max-w-[1200px] mb-20">
-      <div class="title-center pt-4 flex flex-col items-center">
-        <h2 class="text-2xl font-bold title-underline mt-8 mb-4 text-center lg:text-3xl">
+      <div class="title-center pt-4 flex flex-col items-center reveal-element">
+        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 text-center lg:text-3xl">
           Trail "Camino de la Cuencha"
         </h2>
         <h3 class="text-xl font-semibold text-[#e49a69] mb-4">Categoría infantil</h3>

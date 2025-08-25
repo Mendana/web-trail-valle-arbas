@@ -4,12 +4,17 @@ import HugeInfoField from '../fields/HugeInfoField.astro';
 ---
 
 <section class="mb-5">
-  <div class="title-center">
-    <h2 class="text-2xl font-bold title-underline mt-8 mb-4">{title}</h2>
-  </div>
-  <p class="text-center text-base w-[90%] mx-auto">
-    {description}
-  </p>
+  {title && (
+    <div class="title-center">
+      <h2 class="text-2xl font-bold title-underline mt-8 mb-4">{title}</h2>
+    </div>
+  )}
+  
+  {description && (
+    <p class="text-center text-base w-[90%] mx-auto">
+      {description}
+    </p>
+  )}
 
   <HugeInfoField icon={cardIcon} title={cardTitle} description={cardDescription} link={cardLink} />
 </section>
