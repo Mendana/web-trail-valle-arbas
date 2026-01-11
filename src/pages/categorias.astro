@@ -14,6 +14,8 @@ import infinito1 from '../assets/imgCategorias/infinito1.jpg';
 import infinito2 from '../assets/imgCategorias/infinito2.png';
 import infinito3 from '../assets/imgCategorias/infinito3.png';
 import infinito4 from '../assets/imgCategorias/infinito4.jpg';
+import infinito5 from '../assets/imgCategorias/luna1.png';
+
 //Carousel luna
 import luna1 from '../assets/imgCategorias/luna1.png';
 import luna2 from '../assets/imgCategorias/luna2.png';
@@ -60,17 +62,6 @@ import SectionTitle from '../components/SectionTitle.astro';
         link="arbas-luna"
       />
       <DistanceField
-        name="Trail “Sierra del Alceo”"
-        ,
-        description="Pensado para que los cadetes puedan disfrutar de la montaña y la velocidad"
-        ,
-        distance="7,5"
-        ,
-        uphill="350"
-        ,
-        link="alceo"
-      />
-      <DistanceField
         name="Trail “Camino de la Cuencha”"
         ,
         description="Recorrido rápido y divertido para los participantes de la categoría infantil"
@@ -80,6 +71,27 @@ import SectionTitle from '../components/SectionTitle.astro';
         uphill="190"
         ,
         link="cuencha"
+      />
+    </div>
+  </section>
+
+  <section>
+    <SectionTitle
+      title="Carrera del viernes"
+      subtitle="Carrera de bajada especial el viernes"
+      class="reveal-element"
+    />
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
+      <DistanceField
+        name="Trail Arbas Infinito"
+        ,
+        description="Nuestro recorrido más exigente, para los más valientes y preparados."
+        ,
+        distance="23"
+        ,
+        uphill="+2000"
+        ,
+        link="otro"
       />
     </div>
   </section>
@@ -106,6 +118,7 @@ import SectionTitle from '../components/SectionTitle.astro';
           { src: infinito2, alt: 'Bajada a Caldas', caption: 'Bajada a Caldas de Luna' },
           { src: infinito3, alt: 'Vista de la Barragana', caption: 'La Barragana - Vista desde el Valle' },
           { src: infinito4, alt: 'Vista del Palero', caption: 'Collado del Palero' },
+          { src: infinito5, alt: 'Collado de la Barragana', caption: 'Collado de la Barragana' },
         ]}
       />
       <p class="info-text pt-4">
@@ -208,7 +221,7 @@ import SectionTitle from '../components/SectionTitle.astro';
         >. El tiempo máximo de carrera se establece en <strong>5 horas y 30 minutos</strong>.
       </p>
       <div class="text-center mt-6">
-        <a href="#" class="inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a href="https://wikiloc.com" class="inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
           Link al track
         </a>
       </div>

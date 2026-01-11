@@ -1,12 +1,18 @@
 ---
-const { text, icon } = Astro.props;
+// Props text, icon and optional link
+const { text, icon, link } = Astro.props;
 ---
 
 <div class="flex flex-row rounded-full py-2 px-4 items-center gap-2  justify-center">
     <svg class="w-6 h-6 text-[#e49a69] mb-1" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={icon}/>
     </svg>
-    <h4 class="text-base font-semibold">{text}</h4>
+    
+    {link ? 
+        <a href={link} class="text-base font-semibold hover:underline">{text}</a>
+        :
+        <h4 class="text-base font-semibold">{text}</h4>
+    }
 </div>
 
 
