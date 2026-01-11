@@ -36,20 +36,22 @@ import SectionTitle from '../components/SectionTitle.astro';
     <SectionTitle
       title="3 Distancias"
       subtitle="Hemos preparado varias categorías en el trail para que puedas elegir la que más se adapte a ti. Desde 10km hasta 42km, para todos los niveles."
-      class="reveal-element"
+      className="reveal-element"
     />
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
-      <DistanceField
-        name="Trail Arbas Infinito"
-        ,
-        description="Nuestro recorrido más exigente, para los más valientes y preparados."
-        ,
-        distance="23"
-        ,
-        uphill="+2000"
-        ,
-        link="arbas-infinito"
-      />
+      <div class="lg:col-span-2">
+        <DistanceField
+          name="Trail Arbas Infinito"
+          ,
+          description="Nuestro recorrido más exigente, para los más valientes y preparados."
+          ,
+          distance="23"
+          ,
+          uphill="+2000"
+          ,
+          link="arbas-infinito"
+        />
+      </div>
       <DistanceField
         name="Trail Arbas-Luna"
         ,
@@ -79,25 +81,25 @@ import SectionTitle from '../components/SectionTitle.astro';
     <SectionTitle
       title="Carrera del viernes"
       subtitle="Carrera de bajada especial el viernes"
-      class="reveal-element"
+      className="reveal-element"
     />
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 p-4">
+    <div class="flex justify-center p-4">
       <DistanceField
-        name="Trail Arbas Infinito"
+        name="Kilómetro Desvertical"
         ,
-        description="Nuestro recorrido más exigente, para los más valientes y preparados."
+        description="Recorrido antioficial de puro descenso para los amantes de la velocidad en montaña."
         ,
-        distance="23"
+        distance="4,5"
         ,
-        uphill="+2000"
+        uphill="-700"
         ,
-        link="otro"
+        link="km-desvertical"
       />
     </div>
   </section>
 
   <section>
-    <article id="arbas-infinito" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
+    <article id="arbas-infinito" class="pt-20 w-[90%] mx-auto max-w-300">
       <div class="title-center pt-4 reveal-element">
         <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">
           Trail Arbas Infinito
@@ -221,12 +223,12 @@ import SectionTitle from '../components/SectionTitle.astro';
         >. El tiempo máximo de carrera se establece en <strong>5 horas y 30 minutos</strong>.
       </p>
       <div class="text-center mt-6">
-        <a href="https://wikiloc.com" class="inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a href="https://wikiloc.com" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
           Link al track
         </a>
       </div>
     </article>
-    <article id="arbas-luna" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
+    <article id="arbas-luna" class="pt-20 w-[90%] mx-auto max-w-300">
       <div class="title-center pt-4 reveal-element">
         <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">Trail Arbas-Luna</h2>
       </div>
@@ -300,89 +302,12 @@ import SectionTitle from '../components/SectionTitle.astro';
       <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
       <p class="info-text mb-20">Tiempos?</p>
       <div class="text-center mt-6">
-        <a href="#" class="inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a href="#" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
           Link al track
         </a>
       </div>
     </article>
-    <article id="alceo" class="pt-20 w-[90%] mx-auto max-w-[1200px]">
-      <h2 class="text-2xl font-bold text-[#e49a69] text-center">Categorías inferiores</h2>
-      <div class="title-center pt-4 flex flex-col items-center reveal-element">
-        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">
-          Trail "Sierra del Alceo"
-        </h2>
-        <h3 class="text-xl font-semibold text-[#e49a69] mb-4">Categoría cadete</h3>
-      </div>
-      <p class="info-text mb-2">
-        Se trata de un recorrido pensado para que los más jóvenes disfruten de la montaña y de la
-        velocidad. Combina tramos técnicos con otros muy rápidos, ofreciendo una experiencia variada
-        y divertida. Las vistas del valle desde la <strong>Sierra de Alceo</strong> son espectaculares
-        y bien merecerían una pausa… ¡aunque seguramente nadie quiera detenerse!
-      </p>
-      <Carousel
-        images={[
-          { src: luna1, alt: 'Vista desde ?', caption: '¿¿¿¿?????' },
-          { src: luna2, alt: 'Valle de Bajada a Caldas', caption: 'Valle de bajada a Caldas' },
-          { src: luna3, alt: 'Collado ?¿', caption: 'Collado ???¿¿¿¿' },
-          { src: luna4, alt: '¿¿¿?????', caption: '?¿?¿¿?¿?¿' },
-        ]}
-      />
-      <p class="info-text pt-4">Breve descripción del recorrido de la carrera.</p>
-      <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
-      <div class="flex flex-col gap-2">
-        <Image
-          src={PerfilLuna}
-          alt="Perfil de la carrera Trail Arbas-Luna"
-          class="w-full h-auto mb-4"
-          loading="lazy"
-        />
-        <ul>
-          <li>
-            <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
-            Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el trazado sigue un camino
-            ganadero, y desde allí continúa por una senda herbosa paralela a un pequeño arroyo hasta
-            el collado.
-          </li>
-
-          <li>
-            <strong>Collado Ferreras (km 2,5) – Sena de Luna (km 5):</strong>
-            Descenso rápido de 450 m de desnivel. El tramo comienza por un sendero herboso hasta el refugio
-            ganadero (km 4) y después enlaza con una pista que llega casi hasta la autopista.
-          </li>
-
-          <li>
-            <strong>Sena de Luna (km 5) – Collado Aronga (km 8):</strong>
-            Subida de 400 m de desnivel por sendas ganaderas que atraviesan zonas herbosas.
-          </li>
-
-          <li>
-            <strong>Collado Aronga (km 8) – Cubillas de Arbas (km 12):</strong>
-            Bajada de 320 m de desnivel. Al inicio, una senda utilizada por escaladores conduce a las
-            vías de las Peñas de Prado y baja hasta la carretera. Desde allí, se toma una senda hacia
-            el túnel de Alceo, se ascienden 80 m por la Sierra de Alceo y, finalmente, el antiguo <em
-              >Camino de los Carros</em
-            > lleva de regreso al pueblo de Cubillas.
-          </li>
-        </ul>
-      </div>
-
-      <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
-      <ul class="list-disc">
-        <li><strong>Collado Ferreras:</strong> control y avituallamiento líquido.</li>
-        <li><strong>Caldas de Luna:</strong> control y avituallamiento líquido y sólido.</li>
-        <li><strong>Collada de Aronga:</strong> sin control.</li>
-        <li><strong>Cruce de carretera:</strong> punto de control.</li>
-        <li><strong>Meta en Cubillas de Arbas:</strong> avituallamiento líquido y sólido.</li>
-      </ul>
-      <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
-      <p class="info-text mb-20">Tiempos?</p>
-      <div class="text-center mt-6">
-        <a href="#" class="inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
-          Link al track
-        </a>
-      </div>
-    </article>
-    <article id="cuencha" class="pt-20 w-[90%] mx-auto max-w-[1200px] mb-20">
+    <article id="cuencha" class="pt-20 w-[90%] mx-auto max-w-300 mb-20">
       <div class="title-center pt-4 flex flex-col items-center reveal-element">
         <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 text-center lg:text-3xl">
           Trail "Camino de la Cuencha"
@@ -443,7 +368,71 @@ import SectionTitle from '../components/SectionTitle.astro';
       <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
       <p class="info-text mb-20">Tiempos?</p>
       <div class="text-center mt-6">
-        <a href="#" class="inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a href="#" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+          Link al track
+        </a>
+      </div>
+    </article>
+    <article id="km-desvertical" class="pt-20 w-[90%] mx-auto max-w-300 mb-20">
+      <div class="title-center pt-4 flex flex-col items-center reveal-element">
+        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 text-center lg:text-3xl">
+          Kilómetro Desvertical
+        </h2>
+        <h3 class="text-xl font-semibold text-[#e49a69] mb-4">Carrera antioficial</h3>
+      </div>
+      <p class="info-text mb-2">
+        Se trata de un recorrido antioficial de puro descenso que parte desde la cima del Pico ... y llega hasta Cubillas de Arbas. Con una distancia aproximada de 4,5 km y un desnivel negativo de 700 metros, esta carrera está diseñada para los amantes de la velocidad y la adrenalina en montaña.
+      </p>
+      <Carousel
+        images={[
+          { src: luna1, alt: 'Vista desde ?', caption: '¿¿¿¿?????' },
+          { src: luna2, alt: 'Valle de Bajada a Caldas', caption: 'Valle de bajada a Caldas' },
+          { src: luna3, alt: 'Collado ?¿', caption: 'Collado ???¿¿¿¿' },
+          { src: luna4, alt: '¿¿¿?????', caption: '?¿?¿¿?¿?¿' },
+        ]}
+      />
+      <p class="info-text pt-4">Breve descripción del recorrido de la carrera.</p>
+      <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
+      <div class="flex flex-col gap-2">
+        <Image
+          src={PerfilLuna}
+          alt="Perfil de la carrera Trail Arbas-Luna"
+          class="w-full h-auto mb-4"
+          loading="lazy"
+        />
+        <ul>
+          <li>
+            <strong>Cubillas de Arbas (km 0) – Cruce (km 1,5):</strong>
+            Salida desde el pueblo por un camino que enlaza con un sendero herboso, con 120 m de desnivel
+            positivo hasta alcanzar el cruce.
+          </li>
+
+          <li>
+            <strong>Cruce (km 1,5) – Arroyo Balagares (km 2,2):</strong>
+            Tramo por pista con 70 m de desnivel.
+          </li>
+
+          <li>
+            <strong>Arroyo Balagares (km 2,2) – Cruce (km 2,9):</strong>
+            Regreso por el mismo camino utilizado en la subida.
+          </li>
+
+          <li>
+            <strong>Cruce (km 2,9) – Cubillas de Arbas (km 4,5):</strong>
+            Descenso de 120 m de desnivel por pista hasta el pueblo.
+          </li>
+        </ul>
+      </div>
+
+      <h3 class="text-xl font-semibold mt-4 lg:text-2xl">Puntos de paso</h3>
+      <ul class="list-disc">
+        <li><strong>Cruce:</strong> punto de control.</li>
+        <li><strong>Arroyo Balagares:</strong> punto de control y avituallamiento líquido.</li>
+      </ul>
+      <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
+      <p class="info-text mb-20">Tiempos?</p>
+      <div class="text-center mt-6">
+        <a href="#" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
           Link al track
         </a>
       </div>

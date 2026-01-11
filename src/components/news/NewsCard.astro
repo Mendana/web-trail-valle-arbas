@@ -7,9 +7,11 @@ interface Props {
   date: Date;
   url: string;
   featured?: boolean;
+  isFirstFeatured?: boolean;
+  index?: number;
 }
 
-const { title, description, image, imageAlt, date, url, featured = false } = Astro.props;
+const { title, description, image, imageAlt, date, url, featured = false, isFirstFeatured = false, index = 0 } = Astro.props;
 
 // Formato de fecha
 const formattedDate = new Intl.DateTimeFormat('es-ES', { 
@@ -19,7 +21,7 @@ const formattedDate = new Intl.DateTimeFormat('es-ES', {
 }).format(date);
 ---
 
-<a href={url} class={`news-card ${featured ? 'featured' : ''}`}>
+<a href={url} class={`news-card ${isFirstFeatured ? 'featured' : ''} ${index >= 3 ? 'hidden-mobile' : ''}`}>
   <div class="news-card-inner">
     <div class="news-image-container">
       {image && (
@@ -155,12 +157,22 @@ const formattedDate = new Intl.DateTimeFormat('es-ES', {
   }
 
   @media (max-width: 768px) {
+    .news-image-container {
+      height: 180px;
+    }
+
+    .hidden-mobile {
+      display: none;
+    }
+  }
+
+  @media (max-width: 640px) {
     .featured {
       grid-column: span 1;
     }
 
-    .news-image-container {
-      height: 180px;
+    .hidden-mobile {
+      display: none;
     }
   }
 </style>
