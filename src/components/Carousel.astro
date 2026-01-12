@@ -1,10 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 const { images } = Astro.props; // Array de objetos { src, alt, caption }
+const carouselId = `carousel-${Math.random().toString(36).substr(2, 9)}`;
 ---
-<div class="carousel-container max-w-[1200px] mx-auto">
-  <div class="carousel-viewport mt-2" id="carousel-viewport">
-    <div class="carousel-track" id="carousel-track">
+<div class="carousel-container max-w-300 mx-auto" data-carousel-id={carouselId}>
+  <div class="carousel-viewport mt-2">
+    <div class="carousel-track">
       {images.map((img, i) => (
         <div class="carousel-slide" key={i}>
           <Image src={img.src} alt={img.alt} class="carousel-image" loading="lazy" />
@@ -12,14 +13,14 @@ const { images } = Astro.props; // Array de objetos { src, alt, caption }
         </div>
       ))}
     </div>
-    <button class="carousel-arrow left" id="carousel-prev" aria-label="Anterior">
+    <button class="carousel-arrow left" aria-label="Anterior">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"></path></svg>
     </button>
-    <button class="carousel-arrow right" id="carousel-next" aria-label="Siguiente">
+    <button class="carousel-arrow right" aria-label="Siguiente">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"></path></svg>
     </button>
   </div>
-  <div class="carousel-dots" id="carousel-dots">
+  <div class="carousel-dots">
     {images.map((_, i) => (
       <button class={`carousel-dot${i === 0 ? ' active' : ''}`} aria-label={`Ir a la imagen ${i + 1}`}></button>
     ))}
@@ -215,91 +216,91 @@ const { images } = Astro.props; // Array de objetos { src, alt, caption }
 </style>
 
 <script>
-  // Script que se ejecuta una vez en el cliente
+  // Script que se ejecuta para cada instancia del carrusel
   document.addEventListener('DOMContentLoaded', () => {
-    const track = document.getElementById('carousel-track');
-    const prevBtn = document.getElementById('carousel-prev');
-    const nextBtn = document.getElementById('carousel-next');
-    const dots = document.querySelectorAll('.carousel-dot');
+    // Seleccionar todos los carruseles en la página
+    const carousels = document.querySelectorAll('.carousel-container');
+    
+    carousels.forEach((container) => {
+      const track = container.querySelector('.carousel-track');
+      const prevBtn = container.querySelector('.carousel-arrow.left');
+      const nextBtn = container.querySelector('.carousel-arrow.right');
+      const dots = container.querySelectorAll('.carousel-dot');
 
-    // Verificar que los elementos existen
-    if (!track || !prevBtn || !nextBtn) {
-      console.error('Elementos del carrusel no encontrados');
-      return;
-    }
-
-    const slides = track.querySelectorAll('.carousel-slide');
-    const totalSlides = slides.length;
-
-    let current = 0;
-    let autoplayInterval: number | null = null;
-
-    // Función para actualizar el carrusel
-    function updateCarousel(index: number) {
-      current = index;
-
-      // Mover el track (ya se ha verificado que track no es null)
-      if (track) {
-        track.style.transform = `translateX(${-current * 100}%)`;
+      // Verificar que los elementos existen
+      if (!track || !prevBtn || !nextBtn) {
+        console.error('Elementos del carrusel no encontrados');
+        return;
       }
 
-      // Actualizar dots
-      dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === current);
-      });
-    }
+      const slides = track.querySelectorAll('.carousel-slide');
+      const totalSlides = slides.length;
 
-    // Controles de navegación
-    function goToNext() {
-      updateCarousel((current + 1) % totalSlides);
-    }
+      let current = 0;
+      let autoplayInterval: number | null = null;
 
-    function goToPrev() {
-      updateCarousel((current - 1 + totalSlides) % totalSlides);
-    }
+      // Función para actualizar el carrusel
+      function updateCarousel(index: number) {
+        current = index;
 
-    // Iniciar autoplay
-    function startAutoplay() {
-      stopAutoplay();
-      autoplayInterval = setInterval(goToNext, 5000) as unknown as number;
-    }
+        // Mover el track
+        (track as HTMLElement).style.transform = `translateX(${-current * 100}%)`;
 
-    function stopAutoplay() {
-      if (autoplayInterval) {
-        clearInterval(autoplayInterval);
-        autoplayInterval = null;
+        // Actualizar dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === current);
+        });
       }
-    }
 
-    // Event listeners
-    prevBtn.addEventListener('click', () => {
-      goToPrev();
-      stopAutoplay();
-      startAutoplay();
-    });
+      // Controles de navegación
+      function goToNext() {
+        updateCarousel((current + 1) % totalSlides);
+      }
 
-    nextBtn.addEventListener('click', () => {
-      goToNext();
-      stopAutoplay();
-      startAutoplay();
-    });
+      function goToPrev() {
+        updateCarousel((current - 1 + totalSlides) % totalSlides);
+      }
 
-    dots.forEach((dot, i) => {
-      dot.addEventListener('click', () => {
-        updateCarousel(i);
+      // Iniciar autoplay
+      function startAutoplay() {
+        stopAutoplay();
+        autoplayInterval = setInterval(goToNext, 5000) as unknown as number;
+      }
+
+      function stopAutoplay() {
+        if (autoplayInterval) {
+          clearInterval(autoplayInterval);
+          autoplayInterval = null;
+        }
+      }
+
+      // Event listeners
+      prevBtn.addEventListener('click', () => {
+        goToPrev();
         stopAutoplay();
         startAutoplay();
       });
-    });
 
-    // Iniciar autoplay al cargar
-    startAutoplay();
+      nextBtn.addEventListener('click', () => {
+        goToNext();
+        stopAutoplay();
+        startAutoplay();
+      });
 
-    // Pausar en hover
-    const container = document.querySelector('.carousel-container');
-    if (container) {
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          updateCarousel(i);
+          stopAutoplay();
+          startAutoplay();
+        });
+      });
+
+      // Iniciar autoplay al cargar
+      startAutoplay();
+
+      // Pausar en hover
       container.addEventListener('mouseenter', stopAutoplay);
       container.addEventListener('mouseleave', startAutoplay);
-    }
+    });
   });
 </script>
