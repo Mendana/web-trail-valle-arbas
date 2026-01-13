@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://web-trail-valle-arbas.web.app/sitemap-index.xml
