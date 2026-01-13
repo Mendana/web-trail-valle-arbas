@@ -5,13 +5,13 @@ import RoundedInfoField from "./fields/RoundedInfoField.astro";
 const { src, title, poster } = Astro.props;
 ---
 
-<div class="header-video-container w-[100%] h-[60vh] pt-20" style="margin-top: -80px;">
+<div class="header-video-container w-full h-[60vh] pt-20" style="margin-top: -80px;">
   <video autoplay loop muted playsinline class="header-video" poster={poster}>
     <source src={src} type="video/mp4" />
     Tu navegador no soporta el vídeo.
   </video>
   <div class="header-content">
-    <div class="flex flex-col justify-center items-center w-full pt-10 sm:pt-0">
+    <div class="flex flex-col justify-center items-center w-full pt-20 sm:pt-20">
       <h1 class="text-4xl text-center font-extrabold w-[80%] md:text-5xl md:w-[90%]">{title}</h1>
       <div class="flex flex-col gap-2 justify-center items-center mt-6">
         <RoundedInfoField

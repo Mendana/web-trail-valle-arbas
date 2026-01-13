@@ -15,7 +15,7 @@ import AccessSection from '../components/schedule/AccessSection.astro';
   imgTitle="Horario y Ubicaciones"
 >
   <section>
-    <SectionTitle 
+    <SectionTitle
       title="Programa de actividades"
       subtitle="El Trail Valle de Arbas 2025 se celebrará los días 22 y 23 de mayo. Próximamente publicaremos el programa detallado con los horarios de las diferentes actividades y eventos relacionados con la carrera."
     />
@@ -138,117 +138,126 @@ import AccessSection from '../components/schedule/AccessSection.astro';
   </section>
 
   <section>
-    <SectionTitle 
+    <SectionTitle
       title="Ubicaciones principales"
       subtitle="El epicentro de todas las actividades será el pueblo de <strong>Cubillas de Arbas</strong>, situado en el Valle de Arbas, León. A continuación, encontrarás información detallada sobre las principales ubicaciones del evento."
       className="mt-12"
     />
-    
-    <article id="ubicaciones" class="pt-10 w-[90%] mx-auto max-w-[1200px]">
+
+    <article id="ubicaciones" class="pt-10 w-[90%] mx-auto max-w-300">
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10 stagger-reveal">
-        <LocationCard 
-          title="Salida/Meta" 
+        <LocationCard
+          title="Salida/Meta"
           description={[
-            "Plaza de Cubillas de Arbas",
-            "<strong>Coordenadas:</strong> 42.953174, -5.798264"
+            'Plaza de Cubillas de Arbas',
+            '<strong>Coordenadas:</strong> 42.928753, -5.806078',
           ]}
-          mapUrl="https://maps.app.goo.gl/cYHyQ3Y8TUQ8qKvM9"
-          class="stagger-item card-hover"
+          mapUrl="https://maps.app.goo.gl/BxyQGy4k5NVDNoNv9"
         />
-        
-        <LocationCard 
-          title="Recogida de dorsales" 
+
+        <!-- TODO: actualizar horarios -->
+        <LocationCard
+          title="Recogida de dorsales"
           description={[
-            "Restaurante Hotel Rio Viejo (Cubillas de Arbas)",
-            "<strong>Horario viernes:</strong> horario por confirmar",
-            "<strong>Horario sábado:</strong> jorario por confirmar"
+            'Restaurante Hotel Rio Viejo (Cubillas de Arbas)',
+            '<strong>Horario viernes:</strong> horario por confirmar',
+            '<strong>Horario sábado:</strong> horario por confirmar',
           ]}
-          mapUrl="https://maps.app.goo.gl/cYHyQ3Y8TUQ8qKvM9"
+          mapUrl="https://maps.app.goo.gl/7htAiqPGhYPxgLXY8"
         />
-        
-        <LocationCard 
-          title="Zona de aparcamiento" 
+
+        <!-- TODO: actualizar ubicación -->
+        <LocationCard
+          title="Zona de aparcamiento"
           description={[
-            "Se explicará cuando se acerque el evento",
-            "<strong>Plazas:</strong> 200 vehículos",
-            "<strong>Distancia a salida:</strong> 200 metros"
+            'Se explicará cuando se acerque el evento',
+            '<strong>Plazas:</strong> 200 vehículos',
+            '<strong>Distancia a salida:</strong> 200 metros',
           ]}
-          mapUrl="https://maps.app.goo.gl/cYHyQ3Y8TUQ8qKvM9"
+          mapUrl="https://maps.app.goo.gl/xne4vDVqbds2iQ1r5"
         />
-        
-        <LocationCard 
-          title="Zona de duchas" 
+
+        <!-- TODO: actualizar ubicación -->
+        <LocationCard
+          title="Zona de duchas"
           description={[
-            "Albergue o en el Camping (confirmaremos más adelante)",
-            "<strong>Horario:</strong> Sábado de 12:00 a 15:30",
-            "<strong>Distancia desde meta:</strong> 150 metros"
+            'Albergue o en el Camping (confirmaremos más adelante)',
+            '<strong>Horario:</strong> Sábado de 12:00 a 15:30',
+            '<strong>Distancia desde meta:</strong> 150 metros',
           ]}
-          mapUrl="https://maps.app.goo.gl/cYHyQ3Y8TUQ8qKvM9"
+          mapUrl="https://maps.app.goo.gl/xne4vDVqbds2iQ1r5"
         />
       </div>
     </article>
   </section>
 
   <section>
-    <SectionTitle 
+    <SectionTitle
       title="Cómo llegar"
       subtitle="Cubillas de Arbas se encuentra en la montaña central leonesa, en el Valle de Arbas, a unos 60 km de León capital."
       className="mt-12"
     />
-    
-    <article id="como-llegar" class="pt-10 w-[90%] mx-auto max-w-[1200px] mb-20">
+
+    <article id="como-llegar" class="pt-10 w-[90%] mx-auto max-w-300 mb-20">
       <AccessSection title="Acceso por carretera">
         <ul class="mb-8">
           <li>
-            <strong>Desde León:</strong> Toma la Carretera de Asturias hasta Villamanín.  En Villamanín, toma el desvío hacia Casares de Arbas y continúa hasta llegar a Cubillas de Arbas.
+            <strong>Desde León:</strong> Toma la Carretera de Asturias hasta Villamanín. En Villamanín,
+            toma el desvío hacia Casares de Arbas y continúa hasta llegar a Cubillas de Arbas.
           </li>
           <li>
-            <strong>Desde Oviedo:</strong> Toma la A-66 dirección León. Toma la salida en Caldas de Luna. En la carretera cruza toma el desvío sentido León hasta el cruce que pone Pola de Gordón. Continua por esta carretera hasta el desvío marcado como Casares de Arbas, tras atravesar el túnel estarás en el Valle de Arbas.
+            <strong>Desde Oviedo:</strong> Toma la A-66 dirección León. Toma la salida en Caldas de Luna.
+            En la carretera cruza toma el desvío sentido León hasta el cruce que pone Pola de Gordón.
+            Continua por esta carretera hasta el desvío marcado como Casares de Arbas, tras atravesar
+            el túnel estarás en el Valle de Arbas.
           </li>
-          
         </ul>
       </AccessSection>
 
       <AccessSection title="Transporte público" className="mt-8">
         <ul class="mb-8">
           <li>
-            <strong>Tren:</strong> La estación de ferrocarril más cercana es la de Villamanín, a 15 km de Cubillas de Arbas. Desde allí, se recomienda compartir taxi o contactar con la organización para posibles opciones de transporte.
+            <strong>Tren:</strong> La estación de ferrocarril más cercana es la de Villamanín, a 15 km
+            de Cubillas de Arbas. Desde allí, se recomienda compartir taxi o contactar con la organización
+            para posibles opciones de transporte.
           </li>
           <li>
-            <strong>Autobús:</strong> Existe servicio regular de autobuses ALSA hasta Villamanín. Consulta los horarios en la web oficial de ALSA.
+            <strong>Autobús:</strong> Existe servicio regular de autobuses ALSA hasta Villamanín. Consulta
+            los horarios en la web oficial de ALSA.
           </li>
         </ul>
       </AccessSection>
 
       <AccessSection title="Alojamiento" className="mt-8">
         <p class="info-text mb-4">
-          Cubillas de Arbas y los pueblos cercanos disponen de diferentes opciones de alojamiento, aunque con plazas limitadas. Recomendamos reservar con antelación. Algunas opciones son:
+          Cubillas de Arbas y los pueblos cercanos disponen de diferentes opciones de alojamiento,
+          aunque con plazas limitadas. Recomendamos reservar con antelación. Algunas opciones son:
         </p>
-        
+
         <ul class="mb-8">
           <li><strong>Albergue de Cubillas de Arbas</strong> - A 100 metros de la salida</li>
           <li><strong>Hotel Rural Río Viejo</strong> - En Cubillas de Arbas (100m)</li>
           <li><strong>Camping Valle de Arbas</strong> - En el mismo pueblo</li>
-                    <li><strong>CR La Terraza del Valle</strong> - En Casares (3 km)</li>
+          <li><strong>CR La Terraza del Valle</strong> - En Casares (3 km)</li>
 
-                    <li><strong>Hostal el Embrujo</strong> - En Poladura (7 km)</li>
+          <li><strong>Hostal el Embrujo</strong> - En Poladura (7 km)</li>
 
           <li><strong>Hostal Golpejar</strong> - En el Villamanín (15 km)</li>
-          <li><strong>Valneario Caldas de Luna</strong> - En la Caldas de Luna (15km)</li>
+          <li><strong>Balneario Caldas de Luna</strong> - En la Caldas de Luna (15km)</li>
           <li><strong>Hotel Rural Días de Luna</strong> - En Sena de Luna (20km)</li>
           <li><strong>Hostal Vacas y Bicis</strong> - En la Pola de Gordón (25km)</li>
-          <li><strong>Hostal Fontañan</strong> - En la Pola de Gordón (25km)</li>
+          <li><strong>Hostal Fontañán</strong> - En la Pola de Gordón (25km)</li>
           <li><strong>Hostal Vacas y Bicis</strong> - En la Pola de Gordón (25km)</li>
           <li><strong>Hospedería la Bogadera</strong> - En la Pola de Gordón (25km)</li>
           <li><strong>Casa RuralRincón de la Rosa</strong> - En Burgos de Femar (30km)</li>
-
-
-
         </ul>
       </AccessSection>
 
       <div class="flex justify-center mt-10">
-        <a href="/inscripcion" class="cta-button inline-block bg-gradient-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a
+          href="/inscripcion"
+          class="cta-button inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200"
+        >
           Inscríbete ahora
         </a>
       </div>
@@ -273,5 +282,3 @@ import AccessSection from '../components/schedule/AccessSection.astro';
     </article>
   </section>
 </BasePageLayout>
-
-

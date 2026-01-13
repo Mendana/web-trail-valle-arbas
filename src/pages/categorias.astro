@@ -11,8 +11,6 @@ import PerfilLuna from '../assets/imgCategorias/perfilLuna.png';
 import PerfilCuencha from '../assets/imgCategorias/perfilCuencha.png';
 import PerfilCastro from '../assets/imgCategorias/perfilcastro.png';
 
-
-
 //Carousel infinito
 import infinito1 from '../assets/imgCategorias/infinito1.jpg';
 import infinito2 from '../assets/imgCategorias/infinito2.png';
@@ -34,8 +32,6 @@ import castro1 from '../assets/imgCategorias/castro1.png';
 import castro2 from '../assets/imgCategorias/castro2.png';
 import castro3 from '../assets/imgCategorias/castro3.png';
 import castro4 from '../assets/imgCategorias/castro4.png';
-
-
 ---
 
 <BasePageLayout
@@ -45,13 +41,13 @@ import castro4 from '../assets/imgCategorias/castro4.png';
   imgTitle="Categorías y Distancias"
 >
   <section>
+    <div class="title-center pt-8 pb-4 reveal-element flex flex-col items-center">
+      <h1 class="text-3xl lg:text-4xl font-bold text-center mb-2">Todas las categorías</h1>
+      <p class="text-lg lg:text-xl text-center text-gray-600">Tres distancias el sábado y una carrera especial el viernes</p>
+    </div>
+    
     <SectionTitle
-      title="3 Distancias el sabado y 1 el viernes"
-      subtitle=" A continuación te describimos las carreras"
-      className="reveal-element"
-    />
-     <SectionTitle
-      title="Carreras del Sabado (3 distancias)"
+      title="Carreras del Sábado (3 distancias)"
       subtitle="Hemos preparado varias categorías en el trail para que puedas elegir la que más se adapte a ti. Tres distancias: 4,5km (cadete-infantil) 12km y 23 km para todos los niveles."
       className="reveal-element"
     />
@@ -97,7 +93,7 @@ import castro4 from '../assets/imgCategorias/castro4.png';
   <section>
     <SectionTitle
       title="Carrera del viernes"
-      subtitle="NOVEDAD: Carrera de bajada especial el viernes al altardecer (21:00)"
+      subtitle="NOVEDAD: Carrera de bajada especial el viernes al atardecer (21:00)"
       className="reveal-element"
     />
     <div class="flex justify-center p-4">
@@ -133,9 +129,17 @@ import castro4 from '../assets/imgCategorias/castro4.png';
       </p>
       <Carousel
         images={[
-          { src: infinito1, alt: 'Vista inferior de las Tres Marías', caption: 'Las Tres Marías - Vista desde la falda' },
+          {
+            src: infinito1,
+            alt: 'Vista inferior de las Tres Marías',
+            caption: 'Las Tres Marías - Vista desde la falda',
+          },
           { src: infinito2, alt: 'Bajada a Caldas', caption: 'Bajada a Caldas de Luna' },
-          { src: infinito3, alt: 'Vista de la Barragana', caption: 'La Barragana - Vista desde el Valle' },
+          {
+            src: infinito3,
+            alt: 'Vista de la Barragana',
+            caption: 'La Barragana - Vista desde el Valle',
+          },
           { src: infinito4, alt: 'Vista del Palero', caption: 'Collado del Palero' },
           { src: infinito5, alt: 'Collado de la Barragana', caption: 'Collado de la Barragana' },
         ]}
@@ -143,7 +147,8 @@ import castro4 from '../assets/imgCategorias/castro4.png';
       <p class="info-text pt-4">
         El trazado presenta dos partes bien diferenciadas: la primera, hasta el paso intermedio,
         discurre por senderos y caminos entre praderas; la segunda es más técnica, con senderos que
-        atraviesan laderas herbosas y zonas calizas subiendo tres emblemáticas cimas: La Brazosa (1937m), Peña Esquina (1952m), María del Medio (1907m)
+        atraviesan laderas herbosas y zonas calizas subiendo tres emblemáticas cimas: La Brazosa
+        (1937m), Peña Esquina (1952m), María del Medio (1907m)
       </p>
       <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
       <div class="flex flex-col gap-2">
@@ -157,18 +162,20 @@ import castro4 from '../assets/imgCategorias/castro4.png';
           <li>
             <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
             Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el recorrido sigue un camino
-            ganadero, para después continuar por una senda herbosa paralela a un arroyo hasta el collado Ferreras (punto Control y avituallamiento líquido de emergencia)
+            ganadero, para después continuar por una senda herbosa paralela a un arroyo hasta el collado
+            Ferreras (punto Control y avituallamiento líquido de emergencia)
           </li>
 
           <li>
             <strong>Collado Ferreras (km 2,5) – Sena de Luna (km 5):</strong>
             Bajada rápida de 450 m de desnivel por un sendero herboso hasta el refugio ganadero (km 4),
-            y después por pista hasta las proximidades de la autopista (avituallmiento sólido y líquido)
+            y después por pista hasta las proximidades de la autopista (avituallamiento sólido y líquido)
           </li>
 
           <li>
             <strong>Sena de Luna (km 5) – Collado Aronga (km 8):</strong>
-            Subida de 400 m de desnivel por sendas ganaderas a través de praderas de montaña hasta el collado (avituallamiento líquido)
+            Subida de 400 m de desnivel por sendas ganaderas a través de praderas de montaña hasta el
+            collado (avituallamiento líquido)
           </li>
 
           <li>
@@ -186,25 +193,29 @@ import castro4 from '../assets/imgCategorias/castro4.png';
         <ul>
           <li>
             <strong>Cubillas de Arbas (km 12,5) – Pico la Brazosa (km 15):</strong>
-            Subida de 620 m. El trazado comienza por el camino de la Ferreta, rodea la Peña El Castillo
-            y asciende con fuerte pendiente hasta la cima(punto de control y avituallamiento líquido de emergecia)
+            Subida de 620 m. El trazado comienza por el camino de la Ferrata, rodea la Peña El Castillo
+            y asciende con fuerte pendiente hasta la cima(punto de control y avituallamiento líquido de
+            emergencia)
           </li>
 
           <li>
             <strong>Pico la Brazosa (km 15) – Peña Ortigal / Peña Esquina (km 16):</strong>
-            Tramo de 1 km por sendas ganaderas: 120 m de bajada y 130 m de subida. Los últimos 100 m
-            son más técnicos, sobre roca caliza hasta llegar a la cima (punto de control y avituallamiento líquido de emergecia)
+            Tramo de 1 km por sendas ganaderas: 120 m de bajada y 130 m de subida. Los últimos 100 m son
+            más técnicos, sobre roca caliza hasta llegar a la cima (punto de control y avituallamiento
+            líquido de emergencia)
           </li>
 
           <li>
             <strong>Peña Ortigal (km 16) – Refugio de las Tres Marías (km 17,5):</strong>
             Descenso de 400 m. El inicio es técnico sobre roca caliza (100 m), pero pronto se convierte
-            en senda herbosa que permite correr con fluidez hasta el refugio ((punto de control y avituallamiento sòlido)
+            en senda herbosa que permite correr con fluidez hasta el refugio ((punto de control y avituallamiento
+            sólido)
           </li>
 
           <li>
             <strong>Refugio Tres Marías (km 17,5) – Collada del Palero:</strong>
-            Ascenso exigente de 330 m de desnivel por una senda técnica que atraviesa terreno calizo hasta el espectacular collado del Palero (punto de control)
+            Ascenso exigente de 330 m de desnivel por una senda técnica que atraviesa terreno calizo hasta
+            el espectacular collado del Palero (punto de control)
           </li>
 
           <li>
@@ -225,13 +236,17 @@ import castro4 from '../assets/imgCategorias/castro4.png';
         <li>
           <strong>Cubillas de Arbas (paso intermedio):</strong> control y avituallamiento líquido y sólido.
         </li>
-        <li><strong>Cima de la Peña la Brazosa:</strong> punto de control y avituallamiento de emergencia.</li>
-        <li><strong>Cima de Peña Ortigal:</strong> punto de control y avituallamiento de emergecia.</li>
+        <li>
+          <strong>Cima de la Peña la Brazosa:</strong> punto de control y avituallamiento de emergencia.
+        </li>
+        <li>
+          <strong>Cima de Peña Ortigal:</strong> punto de control y avituallamiento de emergencia.
+        </li>
         <li>
           <strong>Refugio de las Tres Marías:</strong> control y avituallamiento líquido y sólido.
         </li>
         <li>
-                  <strong>Collado del Palero:</strong> control.
+          <strong>Collado del Palero:</strong> control.
         </li>
         <li><strong>Meta en Cubillas de Arbas:</strong> avituallamiento líquido y sólido.</li>
       </ul>
@@ -239,18 +254,26 @@ import castro4 from '../assets/imgCategorias/castro4.png';
       <p class="info-text">
         El primer bucle se estima en torno a <strong>1 hora y 30 minutos</strong> para los corredores
         más rápidos. El segundo bucle será más exigente, con un tiempo aproximado de <strong
-          >2 horas y 15m </strong
-        >. El tiempo máximo de carrera se establece en <strong>5 horas y 30 minutos</strong>.
+          >2 horas y 15m
+        </strong>. El tiempo máximo de carrera se establece en <strong>5 horas y 30 minutos</strong
+        >.
       </p>
       <div class="text-center mt-6">
-        <a href="https://es.wikiloc.com/rutas-carrera-por-montana/trail-arbas-infinito-2025-212899881?h=a2zl8q2rm6&wa=sd&utm_campaign=badge&utm_source=unknown&utm_medium=unknown" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a
+          href="https://es.wikiloc.com/rutas-carrera-por-montana/trail-arbas-infinito-2025-212899881?h=a2zl8q2rm6&wa=sd&utm_campaign=badge&utm_source=unknown&utm_medium=unknown"
+          class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Link al track
         </a>
       </div>
     </article>
     <article id="arbas-luna" class="pt-20 w-[90%] mx-auto max-w-300">
       <div class="title-center pt-4 reveal-element">
-        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">Trail Arbas-Luna</h2>
+        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 lg:text-3xl">
+          Trail Arbas-Luna
+        </h2>
       </div>
       <p class="info-text mb-2">
         Esta modalidad está pensada para corredores que prefieren una distancia más corta, rápida y
@@ -264,7 +287,11 @@ import castro4 from '../assets/imgCategorias/castro4.png';
       <Carousel
         images={[
           { src: luna1, alt: 'Vista desde Barragana', caption: 'Collado de la Barragana' },
-          { src: luna2, alt: 'Subida al collado de Aronga', caption: 'Subida al collado de Aronga' },
+          {
+            src: luna2,
+            alt: 'Subida al collado de Aronga',
+            caption: 'Subida al collado de Aronga',
+          },
           { src: luna3, alt: 'Collado Ferreras', caption: 'Collado Ferreras' },
         ]}
       />
@@ -284,8 +311,8 @@ import castro4 from '../assets/imgCategorias/castro4.png';
           <li>
             <strong>Cubillas de Arbas (km 0) – Collado Ferreras (km 2,5):</strong>
             Subida de 370 m de desnivel. Hasta la cabaña del pastor (km 1,3) el trazado sigue un camino
-            ganadero, y desde allí continúa por una senda herbosa paralela a un pequeño arroyo hasta
-            el collado.
+            ganadero, y desde allí continúa por una senda herbosa paralela a un pequeño arroyo hasta el
+            collado.
           </li>
 
           <li>
@@ -316,19 +343,30 @@ import castro4 from '../assets/imgCategorias/castro4.png';
         <li><strong>Caldas de Luna:</strong> control y avituallamiento líquido y sólido.</li>
         <li><strong>Collada de Aronga:</strong> punto de control y avituallamiento liquido.</li>
         <li><strong>Cruce de carretera:</strong> punto de control.</li>
-        <li><strong>Meta en Cubillas de Arbas:</strong> Meta y avituallamiento líquido y sólido.</li>
+        <li>
+          <strong>Meta en Cubillas de Arbas:</strong> Meta y avituallamiento líquido y sólido.
+        </li>
       </ul>
       <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempos estimados</h3>
-      <p class="info-text mb-20">Tiempo record Hugo Cerezo 1:19:40. Tiempo de cierre 3 horas y 15m</p>
+      <p class="info-text mb-20">
+        Tiempo record Hugo Cerezo 1:19:40. Tiempo de cierre 3 horas y 15m
+      </p>
       <div class="text-center mt-6">
-        <a href="#https://es.wikiloc.com/rutas-carrera-por-montana/arbas-luna-by-trail-valle-de-arbas-2025-209373354" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a
+          href="#https://es.wikiloc.com/rutas-carrera-por-montana/arbas-luna-by-trail-valle-de-arbas-2025-209373354"
+          class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Link al track
         </a>
       </div>
     </article>
     <article id="cuencha" class="pt-20 w-[90%] mx-auto max-w-300 mb-20">
       <div class="title-center pt-4 flex flex-col items-center reveal-element">
-        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 text-center lg:text-3xl">
+        <h2
+          class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 text-center lg:text-3xl"
+        >
           Trail "Camino de la Cuencha"
         </h2>
         <h3 class="text-xl font-semibold text-[#e49a69] mb-4">Categoría infantil y cadete</h3>
@@ -342,7 +380,6 @@ import castro4 from '../assets/imgCategorias/castro4.png';
         images={[
           { src: cuencha1, alt: 'Collado de la Cuencha', caption: 'Collado de la Cuencha' },
           { src: cuencha2, alt: 'Cartel de la Cuencha', caption: 'Cartel de la Cuencha' },
-          
         ]}
       />
       <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
@@ -385,30 +422,41 @@ import castro4 from '../assets/imgCategorias/castro4.png';
       <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempo estimado</h3>
       <p class="info-text mb-20">45 minutos</p>
       <div class="text-center mt-6">
-        <a href="https://es.wikiloc.com/rutas-carrera-por-montana/cadetes-2025-by-valle-de-arbas-209374542" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a
+          href="https://es.wikiloc.com/rutas-carrera-por-montana/cadetes-2025-by-valle-de-arbas-209374542"
+          class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Link al track
         </a>
       </div>
     </article>
     <article id="km-desvertical" class="pt-20 w-[90%] mx-auto max-w-300 mb-20">
       <div class="title-center pt-4 flex flex-col items-center reveal-element">
-        <h2 class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 text-center lg:text-3xl">
+        <h2
+          class="text-2xl font-bold title-underline animate-underline mt-8 mb-4 text-center lg:text-3xl"
+        >
           Kilómetro Desvertical (Viernes al anochecer)
         </h2>
-        <h3 class="text-xl font-semibold text-[#e49a69] mb-4">...Te aterves a bajar al anochecer desde el Pico el castro a Cubillas?</h3>
+        <h3 class="text-xl font-semibold text-[#e49a69] mb-4">
+          ...Te atreves a bajar al anochecer desde el Pico el castro a Cubillas?
+        </h3>
       </div>
       <p class="info-text mb-2">
-        Se trata de un recorrido de puro descenso que parte desde la cima del Pico el Castro y llega hasta Cubillas de Arbas. Con una distancia aproximada de 5 km y un desnivel negativo de 430 metros, esta carrera está diseñada para los amantes de la velocidad y la adrenalina en montaña.
+        Se trata de un recorrido de puro descenso que parte desde la cima del Pico el Castro y llega
+        hasta Cubillas de Arbas. Con una distancia aproximada de 5 km y un desnivel negativo de 430
+        metros, esta carrera está diseñada para los amantes de la velocidad y la adrenalina en
+        montaña.
       </p>
       <Carousel
         images={[
-          { src: castro1, alt: 'Vista de bajada 1', caption: 'vista bajada 1' },
-          { src: castro2, alt: 'vista bajada 2', caption: 'vista bajada 2' },
-          { src: castro3, alt: 'vista bajada 3', caption: 'vista bajada 3' },
-          { src: castro4, alt: 'vista bajada 4', caption: 'vista bajada 4' },
+          { src: castro1, alt: 'Vista de la bajada', caption: 'Vista de la bajada' },
+          { src: castro2, alt: 'Vista de la bajada', caption: 'Vista de la bajada' },
+          { src: castro3, alt: 'Vista de la bajada', caption: 'Vista de la bajada' },
+          { src: castro4, alt: 'Vista de la bajada', caption: 'Vista de la bajada' },
         ]}
       />
-      <p class="info-text pt-4">Breve descripción del recorrido de la carrera.</p>
       <h3 class="text-xl font-semibold mt-4 mb-2 lg:mt-8 lg:text-2xl">Descripción de la carrera</h3>
       <div class="flex flex-col gap-2">
         <Image
@@ -431,15 +479,19 @@ import castro4 from '../assets/imgCategorias/castro4.png';
           <li>
             <strong>Collado de la Cuencha (km 3,1) – Cubillas de Arbas (km 5):</strong>
             Por sendero viendo todo el rato el pueblo.
-          </li>        
+          </li>
         </ul>
       </div>
 
-      
       <h3 class="text-xl font-semibold mt-8 lg:text-2xl mb-2">Tiempo estimado</h3>
       <p class="info-text mb-20">35-40 minutos</p>
       <div class="text-center mt-6">
-        <a href="https://es.wikiloc.com/rutas-senderismo/pico-del-castro-collado-las-lomas-cubillas-de-arbas-244519225?h=a2zl8q2rm6&wa=sd&utm_campaign=badge&utm_source=unknown&utm_medium=unknown" class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200">
+        <a
+          href="https://es.wikiloc.com/rutas-senderismo/pico-del-castro-collado-las-lomas-cubillas-de-arbas-244519225?h=a2zl8q2rm6&wa=sd&utm_campaign=badge&utm_source=unknown&utm_medium=unknown"
+          class="inline-block bg-linear-to-r from-[#f97316] to-[#e49a69] text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg hover:from-[#e49a69] hover:to-[#f97316] transition-all duration-200"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Link al track
         </a>
       </div>

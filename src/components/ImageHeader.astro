@@ -19,7 +19,7 @@ const images = {
 const mainImage = images[imgName];
 ---
 
-<div class="header-image-container w-[100%] h-[60vh] pt-20" style="margin-top: -80px;">
+<div class="header-image-container w-full h-[60vh] pt-20" style="margin-top: -80px;">
   <div class="image-wrapper">
     <Image src={mainImage} alt={title} class="header-image animate-image" loading="eager" />
     <div class="header-overlay"></div>
@@ -127,7 +127,7 @@ const mainImage = images[imgName];
       width: 0;
     }
     100% {
-      width: 80px;
+      width: 300px;
     }
   }
 </style>
