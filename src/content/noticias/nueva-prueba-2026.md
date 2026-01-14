@@ -1,6 +1,6 @@
 ---
 title: Descubre nuestra Nueva carrera del Viernes al atardecer
-description: La carrera será sólo de bajada (450m ) desde el Pico el Castro hasta el pueblo de Cubillas de Arbas al atardecer...estate atento que sólo hay 50 plazas (con autobús de subida)
+description: La carrera será sólo de bajada (450m) desde el Pico el Castro hasta el pueblo de Cubillas de Arbas al atardecer...estate atento que sólo hay 50 plazas (con autobús de subida)
 pubDate: 2026-01-15
 image: /images/noticias/noticia2.jpg
 imageAlt: Corredores en la línea de salida de la edición anterior
@@ -10,7 +10,7 @@ featured: true
 
 # Descubre nuestra Nueva carrera del Viernes al atardecer
 
-Nos complace anunciar que ya el viernes vamos a inagurar nueva carrera **Descenso del pico el Castr**.¿Has corrido una carrera sólo de descenso?, ¿y al anochecer?...ATREVETE SOLO HAY 50 plazas
+Nos complace anunciar que ya el viernes vamos a inaugurar nueva carrera **Descenso del pico el Castro**.¿Has corrido una carrera sólo de descenso?, ¿y al anochecer?...ATRÉVETE SOLO HAY 50 plazas
 
 ## Características de la Carrera
 Se trata de una bajada de 5km y casi 450 m de desnivel negativo por senderos rápidos al anochecer...las vistas al valle te dejarán con la boca abierta. 

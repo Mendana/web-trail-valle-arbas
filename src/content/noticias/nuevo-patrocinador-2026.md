@@ -1,6 +1,6 @@
 ---
 title: Nuevos patrocinadores  para la edición 2026
-description: Anunciamos la incorporación de Huevos León como patrocinador  del Trail Valle de Arbas 2026. En tu bolsa del corredor vas a disfurtar de una 12 de huevos. También la empresa de Ginebra leonesa BUNKER se presta a regalar a muchos de los participantes 2 entradadas a la fábrica Bunker con degustación de Ginebras y de Bermut
+description: Anunciamos la incorporación de Huevos León como patrocinador  del Trail Valle de Arbas 2026. En tu bolsa del corredor vas a disfrutar de una 12 de huevos. También la empresa de Ginebra leonesa BUNKER se presta a regalar a muchos de los participantes 2 entradas a la fábrica Bunker con degustación de Ginebras y de Vermú
 pubDate: 2026-01-10
 image: /images/noticias/noticia3.jpg
 imageAlt: Firma del acuerdo con Huevos León y Bunker
@@ -9,7 +9,7 @@ author: Organización Trail Valle de Arbas
 
 # Nuevos patrocinadores  para la edición 2026
 
-Nos complace anunciar que **Huevos  León y Bunker** seráserán dos nuevos patrocinadores de la tercera edición del Trail Valle de Arbas. Este acuerdo supone un importante impulso para nuestra carrera, permitiéndonos mejorar diversos aspectos del evento y ofrecer más valor a todos los participantes.
+Nos complace anunciar que **Huevos  León y Bunker** serán dos nuevos patrocinadores de la tercera edición del Trail Valle de Arbas. Este acuerdo supone un importante impulso para nuestra carrera, permitiéndonos mejorar diversos aspectos del evento y ofrecer más valor a todos los participantes.
 
 ## ¿Quién es Huevos León?
 
