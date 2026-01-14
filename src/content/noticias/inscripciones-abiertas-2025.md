@@ -8,7 +8,7 @@ author: Organización Trail Valle de Arbas
 featured: true
 ---
 
-# ¡Inscripciones abiertas para la edición 2025!
+# Descubre nuestra Nueva carrera del Viernes al atardecer
 
 Nos complace anunciar que ya el viernes vamos a inagurar nueva carrera **Descenso del pico el Castr**.¿Has corrido una carrera sólo de descenso?, ¿y al anochecer?...ATREVETE SOLO HAY 50 plazas
 
