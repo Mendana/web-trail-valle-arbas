@@ -1,46 +1,32 @@
 ---
-title: Nuevo patrocinador principal para la edición 2025
-description: Anunciamos la incorporación de Deportes Montaña Norte como patrocinador principal del Trail Valle de Arbas 2025.
-pubDate: 2025-03-05
+title: Nuevos patrocinadores  para la edición 2026
+description: Anunciamos la incorporación de Huevos León como patrocinador  del Trail Valle de Arbas 2026. En tu bolsa del corredor vas a disfurtar de una 12 de huevos. También la empresa de Ginebra leonesa BUNKER se presta a regalar a muchos de los participantes 2 entradadas a la fábrica Bunker con degustación de Ginebras y de Bermut
+pubDate: 2025-14-001
 image: /images/noticias/noticia3.jpg
-imageAlt: Firma del acuerdo con Deportes Montaña Norte
+imageAlt: Firma del acuerdo con Huevos León y Bunker
 author: Organización Trail Valle de Arbas
 ---
 
-# Deportes Montaña Norte, nuevo patrocinador principal
+# Huevos León y Bunker, nuevos patrocinadorescipal
 
-Nos complace anunciar que **Deportes Montaña Norte** será el patrocinador principal de la tercera edición del Trail Valle de Arbas. Este acuerdo supone un importante impulso para nuestra carrera, permitiéndonos mejorar diversos aspectos del evento y ofrecer más valor a todos los participantes.
+Nos complace anunciar que **Huevos  León y Bunker** seráserán dos nuevos patrocinadores de la tercera edición del Trail Valle de Arbas. Este acuerdo supone un importante impulso para nuestra carrera, permitiéndonos mejorar diversos aspectos del evento y ofrecer más valor a todos los participantes.
 
-## ¿Quién es Deportes Montaña Norte?
+## ¿Quién es Huevos León?
 
-Deportes Montaña Norte es una empresa líder en el sector de material deportivo especializado en deportes de montaña y outdoor. Con más de 15 años de experiencia y tiendas en León, Oviedo y Santander, se ha convertido en un referente para los amantes de la montaña en todo el noroeste peninsular.
+es una empresa familiar española fundada en los años 60, especializada en la selección, envasado, distribución y comercialización de huevos y productos avícolas (pollo, gallina, codorniz, etc.), además de conejo y derivados, con sede en la provincia de León. Son conocidos por su integración vertical, controlando desde la alimentación de las aves hasta la distribución, enfocándose en la calidad, la frescura del día y el bienestar anima
+
+## ¿Quién es Bunker 
+Bunker Distillery es una destilería española que nace en 2018 en León tras 10 años de destilación clandestina para convertirse en una destilería artesanal con Filosofía Propia.
+En el año de su lanzamiento (2018) Bunker Origen fue premiada con:
+2018 Medalla de oro en China Wine & Spirits Awards.
+2018 Medalla de plata en Int. Spirits Challenge de Inglaterra.
+2018 Medalla de bronce en Berlin International Spirits Competition.
+2018 Medalla de bronce en San Francisco World Spirits Competition.
 
 ## Beneficios para los participantes
 
 Gracias a esta colaboración, todos los inscritos en el Trail Valle de Arbas 2025 podrán disfrutar de:
 
-- **Descuento del 15%** en compras realizadas en tiendas Deportes Montaña Norte (presentando el dorsal)
-- **Bolsa del corredor mejorada** con productos técnicos de primeras marcas
-- **Sorteos de material deportivo** durante la entrega de dorsales
-- **Servicio técnico gratuito** en la zona de meta para pequeños ajustes en el equipamiento
+- **Bolsa del corredor mejorada** con una docena de huevo por participante
+- **Entradas a la destilería con degustación valorada en 12€** para mucho de los corredores
 
-## Zona Expo
-
-La colaboración incluye también la instalación de una completa Zona Expo el día antes de la carrera y durante toda la jornada del evento, donde:
-
-- Se podrá probar material de las principales marcas del sector
-- Habrá asesoramiento personalizado por parte de técnicos especializados
-- Se realizarán demostraciones y pequeños talleres formativos
-- Encontrarás ofertas exclusivas para participantes
-
-## Declaraciones
-
-En palabras de Carlos Martínez, director de Deportes Montaña Norte:
-
-> "Estamos muy ilusionados con este patrocinio. El Trail Valle de Arbas se ha consolidado en poco tiempo como una de las carreras con más proyección del noroeste, y sus valores de respeto por la montaña y promoción del deporte en entornos naturales están perfectamente alineados con la filosofía de nuestra empresa."
-
-Por su parte, Ana López, directora del Trail Valle de Arbas, ha señalado:
-
-> "Este acuerdo nos permite dar un salto cualitativo en la organización del evento. Deportes Montaña Norte no solo aporta recursos económicos, sino también su experiencia y conocimiento del sector, que serán muy valiosos para seguir mejorando año tras año."
-
-Desde la organización queremos agradecer también a todos los patrocinadores que han confiado en nosotros desde el principio y que siguen apoyando este proyecto para hacer del Trail Valle de Arbas uno de los eventos de referencia en el calendario nacional de carreras por montaña.
