@@ -7,7 +7,7 @@ imageAlt: Firma del acuerdo con Huevos León y Bunker
 author: Organización Trail Valle de Arbas
 ---
 
-# Huevos León y Bunker, nuevos patrocinadorescipal
+# Huevos León y Bunker, nuevos patrocinadores
 
 Nos complace anunciar que **Huevos  León y Bunker** seráserán dos nuevos patrocinadores de la tercera edición del Trail Valle de Arbas. Este acuerdo supone un importante impulso para nuestra carrera, permitiéndonos mejorar diversos aspectos del evento y ofrecer más valor a todos los participantes.
 
