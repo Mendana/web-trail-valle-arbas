@@ -1,0 +1,70 @@
+[debug] [2026-01-14T19:58:50.675Z] ----------------------------------------------------------------------
+[debug] [2026-01-14T19:58:50.683Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\menda\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-01-14T19:58:50.684Z] CLI Version:   15.2.1
+[debug] [2026-01-14T19:58:50.684Z] Platform:      win32
+[debug] [2026-01-14T19:58:50.685Z] Node Version:  v22.14.0
+[debug] [2026-01-14T19:58:50.686Z] Time:          Wed Jan 14 2026 20:58:50 GMT+0100 (GMT+01:00)
+[debug] [2026-01-14T19:58:50.686Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-14T19:58:56.448Z] Object "/hosting" in "firebase.json" has unknown property: {"additionalProperty":"error"}
+[debug] [2026-01-14T19:58:56.449Z] Field "/hosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-14T19:58:56.449Z] Field "/hosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-14T19:58:56.456Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-14T19:58:56.457Z] > authorizing via signed-in user (diegodiazmenda@gmail.com)
+[debug] [2026-01-14T19:58:56.457Z] [iam] checking project web-trail-valle-arbas for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-14T19:58:56.459Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:58:56.459Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:58:56.461Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions [none]
+[debug] [2026-01-14T19:58:56.461Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions x-goog-quota-user=projects/web-trail-valle-arbas
+[debug] [2026-01-14T19:58:56.461Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-14T19:58:57.313Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions 401
+[debug] [2026-01-14T19:58:57.314Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2026-01-14T19:58:57.314Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-01-14T19:58:57.314Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:58:57.314Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:58:57.315Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-01-14T19:58:57.316Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:58:57.316Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas [none]
+[debug] [2026-01-14T19:58:57.507Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas 401
+[debug] [2026-01-14T19:58:57.507Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2026-01-14T19:58:57.507Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-01-14T19:58:57.507Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:58:57.507Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:58:57.508Z] Request to https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
+[debug] [2026-01-14T19:59:04.080Z] ----------------------------------------------------------------------
+[debug] [2026-01-14T19:59:04.085Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\menda\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2026-01-14T19:59:04.086Z] CLI Version:   15.2.1
+[debug] [2026-01-14T19:59:04.087Z] Platform:      win32
+[debug] [2026-01-14T19:59:04.087Z] Node Version:  v22.14.0
+[debug] [2026-01-14T19:59:04.088Z] Time:          Wed Jan 14 2026 20:59:04 GMT+0100 (GMT+01:00)
+[debug] [2026-01-14T19:59:04.088Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-01-14T19:59:07.448Z] Object "/hosting" in "firebase.json" has unknown property: {"additionalProperty":"error"}
+[debug] [2026-01-14T19:59:07.449Z] Field "/hosting" in "firebase.json" is possibly invalid: must be array
+[debug] [2026-01-14T19:59:07.449Z] Field "/hosting" in "firebase.json" is possibly invalid: must match a schema in anyOf
+[debug] [2026-01-14T19:59:07.456Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-01-14T19:59:07.457Z] > authorizing via signed-in user (diegodiazmenda@gmail.com)
+[debug] [2026-01-14T19:59:07.457Z] [iam] checking project web-trail-valle-arbas for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-01-14T19:59:07.459Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:59:07.459Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:59:07.461Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions [none]
+[debug] [2026-01-14T19:59:07.461Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions x-goog-quota-user=projects/web-trail-valle-arbas
+[debug] [2026-01-14T19:59:07.461Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-01-14T19:59:08.238Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions 401
+[debug] [2026-01-14T19:59:08.239Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2026-01-14T19:59:08.239Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-01-14T19:59:08.239Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:59:08.239Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:59:08.240Z] [iam] error while checking permissions, command may fail: Request to https://cloudresourcemanager.googleapis.com/v1/projects/web-trail-valle-arbas:testIamPermissions had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2026-01-14T19:59:08.241Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:59:08.241Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas [none]
+[debug] [2026-01-14T19:59:08.362Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas 401
+[debug] [2026-01-14T19:59:08.362Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2026-01-14T19:59:08.362Z] Got a 401 Unauthenticated error for a call that required authentication. Refreshing tokens.
+[debug] [2026-01-14T19:59:08.362Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:59:08.362Z] Checked if tokens are valid: true, expires at: 1768423216276
+[debug] [2026-01-14T19:59:08.363Z] Request to https://firebase.googleapis.com/v1beta1/projects/web-trail-valle-arbas had HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[error] 
+[error] Error: Assertion failed: resolving hosting target of a site with no site name or target name. This should have caused an error earlier
