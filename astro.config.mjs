@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://web-trail-valle-arbas.web.app/",
+  site: "https://vallearbas.es/",
   vite: {
     plugins: [tailwind()],
   },

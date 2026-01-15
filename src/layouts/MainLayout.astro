@@ -12,11 +12,11 @@ import NewsSection from '../components/news/NewsSection.astro';
 const { title, description } = Astro.props;
 
 //Images
-import carousel1 from '../assets/imgCarruselMainPage/carrusel1.jpg';
-import carousel2 from '../assets/imgCarruselMainPage/carrusel2.jpg';
-import carousel3 from '../assets/imgCarruselMainPage/carrusel3.jpg';
-import carousel4 from '../assets/imgCarruselMainPage/carrusel4.jpg';
-import carousel5 from '../assets/imgCarruselMainPage/carrusel5.jpg';
+import carousel1 from '../assets/imgCarruselMainPage/carrusel1.avif';
+import carousel2 from '../assets/imgCarruselMainPage/carrusel2.avif';
+import carousel3 from '../assets/imgCarruselMainPage/carrusel3.avif';
+import carousel4 from '../assets/imgCarruselMainPage/carrusel4.avif';
+import carousel5 from '../assets/imgCarruselMainPage/carrusel5.avif';
 
 // Importación del tipo Sponsor
 import type { Sponsor } from '../components/sponsors/SponsorGrid.astro';
@@ -25,159 +25,159 @@ import type { Sponsor } from '../components/sponsors/SponsorGrid.astro';
 const sponsors: Sponsor[] = [
   {
     name: 'Ayuntamiento de Villamanín',
-    logo: '/images/sponsors/villamanin.jpg',
+    logo: '/images/sponsors/villamanin.avif',
     url: 'https://www.aytovillamanin.es/',
     level: 'principal',
   },
   {
     name: 'Diputación de León',
-    logo: '/images/sponsors/dipu.jpg',
+    logo: '/images/sponsors/dipu.avif',
     url: 'https://www.dipuleon.es/',
     level: 'principal',
   },
   {
     name: 'Federación de Montaña CyL',
-    logo: '/images/sponsors/federacion.jpg',
+    logo: '/images/sponsors/federacion.avif',
     url: 'https://www.fclm.com/',
     level: 'principal',
   },
   {
     name: 'Embutidos Ezequiel',
-    logo: '/images/sponsors/ezequiel.jpg',
+    logo: '/images/sponsors/ezequiel.avif',
     url: 'https://www.embutidosezequiel.com/?srsltid=AfmBOorSUk5F-bLbms_pT8TVWNKmZzEK4__L4aWE90COOiB122j-hqNh',
     level: 'principal',
   },
   {
     name: 'RBH Global',
-    logo: '/images/sponsors/rbh.png',
+    logo: '/images/sponsors/rbh.avif',
     url: 'https://rbhglobal.com/',
     level: 'principal',
   },
   {
     name: 'Huevos Leon',
-    logo: '/images/sponsors/huevos.png',
+    logo: '/images/sponsors/huevos.avif',
     url: 'https://www.huevosleon.es/',
     level: 'principal',
   },
   {
     name: 'Casa Rural Valle de Arbas',
-    logo: '/images/sponsors/cr.jpg',
+    logo: '/images/sponsors/cr.avif',
     url: '#',
   },
   {
     name: 'Instituto Leonés de la Cultura',
-    logo: '/images/sponsors/cultura.png',
+    logo: '/images/sponsors/cultura.avif',
     url: 'https://www.institutoleonesdecultura.es/',
   },
   {
     name: 'Bunker destilería',
-    logo: '/images/sponsors/bunker.jpg',
+    logo: '/images/sponsors/bunker.avif',
     url: 'https://bunkerdistillery.com/',
   },
   {
     name: 'Reserva de la Biosfera del Alto Bernesga',
-    logo: '/images/sponsors/biosfera.png',
+    logo: '/images/sponsors/biosfera.avif',
     url: 'https://altobernesgabiosfera.es/',
   },
   {
     name: 'Balneario de Caldas de Luna',
-    logo: '/images/sponsors/balneario.png',
+    logo: '/images/sponsors/balneario.avif',
     url: 'https://www.balneariocaldasdeluna.com/es/',
   },
   {
     name: 'Restaurante y Fábrica embutido Entrepeñas',
-    logo: '/images/sponsors/entrepenas.png',
+    logo: '/images/sponsors/entrepenas.avif',
     url: 'https://www.embutidosentrepenas.es/',
   },
   {
     name: 'Embutidos la pradera de Fontún',
-    logo: '/images/sponsors/fontun.jpg',
+    logo: '/images/sponsors/fontun.avif',
     url: 'https://embutidoslapradera.com/?srsltid=AfmBOoqRnx5IHYbS7mg2EKItwF5zLFKruYdusAPtskyfYhyHvG-plv6d',
   },
   
   {
     name: 'Super de Villamanín',
-    logo: '/images/sponsors/super.jpg',
+    logo: '/images/sponsors/super.avif',
     url: 'https://www.facebook.com/p/El-Super-De-Villamanin-100057493006622/?locale=es_ES',
   },
   {
     name: 'Hotel Rio Viejo',
-    logo: '/images/sponsors/hotelrv.jpg',
+    logo: '/images/sponsors/hotelrv.avif',
     url: 'https://rio-viejo.co/',
   },
     {
     name: 'Camping Valle de Arbas',
-    logo: '/images/sponsors/camping.jpg',
+    logo: '/images/sponsors/camping.avif',
     url: 'https://www.facebook.com/p/Camping-Valle-de-Arbas-100085132209798/',
   },
 {
     name: 'Embrujo',
-    logo: '/images/sponsors/embrujo.png',
+    logo: '/images/sponsors/embrujo.avif',
     url: 'http://www.posadaelembrujo.es/',
   },
   {
     name: 'Hotel Golpejar',
-    logo: '/images/sponsors/golpejar.jpg',
+    logo: '/images/sponsors/golpejar.avif',
     url: 'https://www.facebook.com/people/Hostal-Restaurante-Golpejar/100054263030206/?locale=es_LA#',
   },
   {
     name: 'Casa rural Terraza del Valle',
-    logo: '/images/sponsors/terraza.jpg',
+    logo: '/images/sponsors/terraza.avif',
     url: 'https://www.laterrazadelvalle.com/',
   },
   {
     name: 'Hotel Rural Días de Luna',
-    logo: '/images/sponsors/dias.png',
+    logo: '/images/sponsors/dias.avif',
     url: 'https://www.diasdeluna.com/',
   },
   {
     name: 'Casa Rural Rincón de la Rosa',
-    logo: '/images/sponsors/rincon.jpg',
+    logo: '/images/sponsors/rincon.avif',
     url: 'https://elrincondelarosa.es/es/',
   },
   {
     name: 'Hospedería la Bogadera',
-    logo: '/images/sponsors/bodaguera.png',
+    logo: '/images/sponsors/bodaguera.avif',
     url: 'https://labogadera.com/',
   },
   {
     name: 'Hostal Bicis y Vacas',
-    logo: '/images/sponsors/vacas.png',
+    logo: '/images/sponsors/vacas.avif',
     url: 'https://bicisyvacas.es/',
   },
   {
     name: 'Hostal Fontañán',
-    logo: '/images/sponsors/fontanan.png',
+    logo: '/images/sponsors/fontanan.avif',
     url: 'https://hostalfontanan.com/',
   },
   {
     name: 'Turismo activo Guheko',
-    logo: '/images/sponsors/guheko.png',
+    logo: '/images/sponsors/guheko.avif',
     url: 'https://www.guheko.com/index.php/Centro_de_Turismo_activo',
   },
   {
     name: 'Turismo activo Tiki Aventura',
-    logo: '/images/sponsors/tiki.png',
+    logo: '/images/sponsors/tiki.avif',
     url: 'https://tikiaventura.com/',
   },
   {
     name: 'Turismo activo Naturocio',
-    logo: '/images/sponsors/naturocio.jpg',
+    logo: '/images/sponsors/naturocio.avif',
     url: 'https://www.naturocio.net/',
   },
   {
     name: 'Dirty Moustache Bike',
-    logo: '/images/sponsors/bicis.png',
+    logo: '/images/sponsors/bicis.avif',
     url: 'https://dirtymoustachebikes.com/',
   },
   {
     name: 'La Despensa de Fer',
-    logo: '/images/sponsors/despensa.jpg',
+    logo: '/images/sponsors/despensa.avif',
     url: 'https://embutidodeleon.net/',
   },
 {
     name: 'Carnicería de Nino',
-    logo: '/images/sponsors/nino.jpg',
+    logo: '/images/sponsors/nino.avif',
     url: 'https://www.facebook.com/p/Carnicer%C3%ADa-Nino-Villaman%C3%ADn-61553038727990/',
   },
 ];
@@ -189,7 +189,7 @@ const sponsors: Sponsor[] = [
   <body>
     <StickyMenu class="stiky" />
     <VideoHeader
-      src="/videoTrail2026.mp4"
+      src="/videoTrail2026.webm"
       poster="/frameTrail2026.jpg"
       title="Trail Valle de Arbas 2026"
     />
